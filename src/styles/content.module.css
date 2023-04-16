@@ -1,0 +1,150 @@
+.content section {
+    margin-bottom: 2em;
+}
+.productwrapper {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 12px;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.picwrapper {
+    display: flex;
+    justify-content: center;
+}
+.mainproduct, .second {
+    color: white;
+}
+
+.mainproduct, .fourth .picwrapper {
+    background-color: black;
+}
+.second {
+    background-color: hsl(26deg 92% 55% / 88%);
+}
+
+.third, .fourth .text {
+    color: black;
+    background-color: #efecec;
+}
+.mainproduct img {
+    filter: drop-shadow(0 0 8.75rem white);
+}
+.second img, .fourth img {
+    filter: drop-shadow(0 0 5.75rem white);
+}
+.third img {
+    filter: drop-shadow(0 0 1.75rem white);
+}
+
+
+.mainproduct .link {
+    background-color: hsl(26, 100%, 55%);
+}
+
+.second .link{
+    background-color: black;
+}
+.third .link, .fourth .link{
+    border: 1px solid black;
+    color: black;
+}
+
+.productwrapper  div {
+    width: 50%;
+    min-width: 300px;
+    margin: 0 auto;
+}
+.productwrapper .text > div
+{
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+}
+.productwrapper.fourth > div
+{
+    width: 45%;
+    border-radius: 12px;
+    margin: 0;
+}
+
+.text {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    text-align: center;
+    padding: 1em;
+}
+
+.new {
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.link {
+    cursor: pointer;
+    width: 60%;
+    /* background-color: hsl(26, 100%, 55%); */
+    color: white;
+    display: flex;
+    justify-content: center;
+    border: none;
+    padding: 15px;
+    margin: 0 auto;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 14px;
+    /* box-shadow: 1px 12px 18px 3px rgba(255,237,224,1);
+    -webkit-box-shadow: 1px 12px 18px 3px rgba(255,237,224,1);
+    -moz-box-shadow: 1px 12px 18px 3px rgba(255,237,224,1); */
+}
+
+@media screen and (max-width:768px) 
+{
+    .content section.productwrapper {
+        height: 100vh;
+    }
+
+    .content section.productwrapper  div, .productwrapper.fourth  .text  {
+        width: 100%;
+    }
+ 
+    .productwrapper img {
+        max-width: 80vw;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .link 
+    {
+        position: absolute;
+        top: 86%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    
+    .productwrapper:not(.fourth) .text {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 2;
+    }
+    .productwrapper:not(.fourth) .text > div {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 40%;
+    }
+    .productwrapper.fourth .text {
+        margin-top: 1em;
+        padding-bottom: 3em;
+    }
+    .productwrapper.fourth .text > div {
+        margin-bottom: 1em;
+    }
+}
