@@ -50,8 +50,8 @@ function Home(pageProps) {
 
   function toggleActiveMenu()
   {
-      const navlist = document.querySelector('.nav ul');
-      navlist.classList.toggle('active')
+      const navlist = document.querySelector('nav ul');
+      navlist.classList.toggle(styles.active)
   }
   
   useEffect(() => {
@@ -62,30 +62,26 @@ function Home(pageProps) {
     myPanel.onmousemove = transformPanel;
     myPanel.onmouseenter = handleMouseEnter;
     myPanel.onmouseleave = handleMouseLeave;
-    window.addEventListener('DOMContentLoaded', e => {
-      if(window.innerWidth > 1300)
-      {
-      const sliders = document.querySelectorAll('.slide-right,.slide-top, .slide-bottom');
-      sliders.forEach(slider => {
-          let className = slider.className;
-          slider.classList.remove(className);
-          slider.classList.add('hidden')
-          const parent = slider.closest('section');
-          const parentClientRects = parent.getClientRects()[0]
-          const coordYparent = parentClientRects.y;
-          const heightParent = parentClientRects.height;
-          const triggerPoint = coordYparent-(heightParent);
-          // const triggerPoint = coordYparent+(heightParent/2);
-          document.addEventListener('scroll', event => {
-              if(window.scrollY >= triggerPoint && slider.classList.contains('hidden'))
-              {
-              slider.classList.remove('hidden')
-              slider.classList.add(className);
-              }
-          })
-      })
-  }
-  })
+    
+    // if(window.innerWidth > 1300)
+    // {
+        const sliders = document.querySelectorAll(`.${styles.slideright},.${styles.slidetop}, .${styles.slidebottom}`);
+        sliders.forEach(slider => {
+            let className = slider.className;
+            const parent = slider.closest('section');
+            const parentClientRects = parent.getClientRects()[0]
+            const coordYparent = parentClientRects.y;
+            const heightParent = parentClientRects.height;
+            const triggerPoint = coordYparent-(heightParent);
+            // const triggerPoint = coordYparent+(heightParent/2);
+            document.addEventListener('scroll', event => {
+                if(window.scrollY >= triggerPoint && slider.classList.contains(styles.hidden))
+                {
+                slider.classList.remove(styles.hidden)
+                }
+            })
+        })
+    // }
   }, [])
   // console.log(pageProps)
   return (
@@ -107,7 +103,7 @@ function Home(pageProps) {
                 </ul>
             </nav>
             <div className={styles.burger}>
-                <input type="checkbox" onchange="toggleActiveMenu()"/>
+                <input type="checkbox" onChange={e=>toggleActiveMenu()}/>
                 <span></span>
                 <span></span>
                 <span></span>
@@ -139,7 +135,7 @@ function Home(pageProps) {
     </div>
     <main>
         {/* <section className={styles.presentation} >
-            <div className={styles.slideRight} >
+            <div className={styles.slideright} >
                 <h2 >Présentation</h2>
                 <b >Je m&apos;appelle Christelle,</b>
                 <p >
@@ -155,7 +151,7 @@ function Home(pageProps) {
             <img src={"/images/photo site.jpeg"} alt="" />
         </section> */}
         <section className={styles.prestations}>
-            <div className={styles.slideTop} >
+            <div className={[styles.slidetop, styles.hidden].join(' ')} >
                 <h3>Professionnels</h3>
                 <p>
                     L&apos;investissement dans le bien-être des employés peut améliorer leur santé physique et mentale, augmenter la productivité, réduire l&apos;absentéisme, améliorer la rétention des employés, renforcer l&apos;image de l&apos;entreprise et réduire les coûts liés à la santé. <br/>
@@ -166,7 +162,7 @@ function Home(pageProps) {
                     Prestations professionnels
                 </a>
             </div>
-            <div  className={styles.slideBottom}>
+            <div  className={[styles.slidebottom, styles.hidden].join(' ')}>
                 <h3 >Particuliers</h3>
                 <p>
                     Équilibrez votre vie, épanouissez vous au travail : Trouvez un équilibre entre votre vie personnelle et professionnelle pour être plus heureux et plus performant.<br/>
