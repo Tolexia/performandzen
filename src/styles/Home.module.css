@@ -296,11 +296,12 @@ transform: rotate(-45deg) translate(4px, -2px);
       opacity: 1
   }
 }
-#panel-container {
+.panelContainer {
   /* background-size: cover; */
-  transform: perspective(400px) rotateX(0deg) rotateY(0deg);
+  /* transform: perspective(400px) rotateX(0deg) rotateY(0deg); */
   transform-style: preserve-3d;
   box-shadow: 1.5rem 2.5rem 5rem 0.7rem rgba(0,0,0,0.13);
+  animation: visitcard3D 5s ease-in 1s infinite linear;
 }
 .panelContent {
   color: black;
@@ -389,6 +390,50 @@ transform: rotate(-45deg) translate(4px, -2px);
       -webkit-transform: translateY(0);
               transform: translateY(0);
   }
+}
+@-webkit-keyframes visitcard3D {
+    0% {
+      -webkit-transform: perspective(400px) rotateX(-5deg) rotateY(-5deg);
+      transform: perspective(400px) rotateX(-5deg) rotateY(-5deg);
+    }
+    20% {
+      -webkit-transform: perspective(400px) rotateX(5deg) rotateY(-5deg);
+      transform: perspective(400px) rotateX(5deg) rotateY(-5deg);
+    }
+    60% {
+      -webkit-transform: perspective(400px) rotateX(5deg) rotateY(5deg);
+      transform: perspective(400px) rotateX(5deg) rotateY(5deg);
+    }
+    70% {
+      -webkit-transform: perspective(400px) rotateX(-5deg) rotateY(5deg);
+      transform: perspective(400px) rotateX(-5deg) rotateY(5deg);
+    }
+    100% {
+      -webkit-transform: perspective(400px) rotateX(-5deg) rotateY(-5deg);
+      transform: perspective(400px) rotateX(-5deg) rotateY(-5deg);
+    }
+  }
+  @keyframes visitcard3D {
+    0% {
+      -webkit-transform: perspective(400px) rotateX(-5deg) rotateY(-5deg);
+      transform: perspective(400px) rotateX(-5deg) rotateY(-5deg);
+    }
+    25% {
+      -webkit-transform: perspective(400px) rotateX(5deg) rotateY(-5deg);
+      transform: perspective(400px) rotateX(5deg) rotateY(-5deg);
+    }
+    50% {
+      -webkit-transform: perspective(400px) rotateX(5deg) rotateY(5deg);
+      transform: perspective(400px) rotateX(5deg) rotateY(5deg);
+    }
+    75% {
+      -webkit-transform: perspective(400px) rotateX(-5deg) rotateY(5deg);
+      transform: perspective(400px) rotateX(-5deg) rotateY(5deg);
+    }
+    100% {
+      -webkit-transform: perspective(400px) rotateX(-5deg) rotateY(-5deg);
+      transform: perspective(400px) rotateX(-5deg) rotateY(-5deg);
+    }
 }
 @media screen and (max-width:1300px) 
 {
