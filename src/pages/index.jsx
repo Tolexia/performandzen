@@ -46,7 +46,7 @@ function Home(pageProps) {
           subpanel.style.transition = "";
       }, 100);
       subpanel.style.transform = "perspective(400px) rotateY(0deg) rotateX(0deg)";
-      subpanel.style.animation = styles.visitcard3D+' 10s ease-in 1s infinite'  }
+      subpanel.style.animation = styles.visitcard3D+' 10s linear 1s infinite alternate'  }
  /*Fi+  effet 3D parallax*/
 
   function toggleActiveMenu()
@@ -95,7 +95,7 @@ function Home(pageProps) {
       </Head>
       <div className={styles.herobanner} >
         <header className={styles.header}>
-            <img src={"/images/logo.png"} width={140} className={styles.logo} alt='perform&zen logo'/>
+            <img loading = 'lazy' src={"/images/logo.png"} width={140} className={styles.logo} alt='perform&zen logo de la marque'/>
             <nav className={styles.nav}>
                 <ul>
                     <li><a>Prestations aux professionnels</a></li>
@@ -149,7 +149,7 @@ function Home(pageProps) {
                     Mon approche, de manière générale, consiste à m&apos;appuyer sur mon expérience acquise ainsi que sur les outils classiques de l&apos;accompagnement en optimisation du potentiel et de les associer à des méthodes originales et novatrices afin d&apos;obtenir de meilleures performances.
                 </p>
             </div>
-            <img src={"/images/photo site.jpeg"} alt="" />
+            <img loading = 'lazy' src={"/images/photo site.jpeg"} alt="" />
         </section> */}
         <section className={styles.prestations}>
             <div className={[styles.slidetop, styles.hidden].join(' ')} >
@@ -177,14 +177,14 @@ function Home(pageProps) {
         </section>
         <section id = "contact" className={styles.contact} >
             <div id="panel"  className={styles.panel} >
-                <img id="panel-container" className={styles.panelContainer}  src={"/images/png_20220724_153350_0000.PNG"} alt=''/>
+                <img loading = 'lazy' id="panel-container" className={styles.panelContainer}  src={"/images/png_20220724_153350_0000.PNG"} alt=''/>
             </div>
             <div>
                 <h2>Contact</h2>
                 <b>Christelle CROIZÉ</b>
                 <a href = "mailto:performandzen@gmail.com">performandzen@gmail.com</a>
                 <a href = "tel:0675563584">06.75.56.35.84</a>
-                <a className={styles.linkedin}><img src={"/images/logo-linkedin.png"} alt="" /></a>
+                <a className={styles.linkedin}><img loading = 'lazy' src={"/images/logo-linkedin.png"} alt="" /></a>
             </div>
         </section>
     </main>
