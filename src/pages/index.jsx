@@ -45,11 +45,9 @@ function Home(pageProps) {
       setTimeout(() => {
           subpanel.style.transition = "";
       }, 100);
-
       subpanel.style.transform = "perspective(400px) rotateY(0deg) rotateX(0deg)";
-      subpanel.style.animation = `${styles.visitcard3D} 5s ease-in 1s infinite linear`;
-  }
-  /*Fin effet 3D parallax*/
+      subpanel.style.animation = styles.visitcard3D+' 10s ease-in 1s infinite'  }
+ /*Fi+  effet 3D parallax*/
 
   function toggleActiveMenu()
   {
