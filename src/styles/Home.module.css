@@ -479,7 +479,7 @@ transform: rotate(-45deg) translate(4px, -2px);
       margin-bottom: 4em;
   }
   .contact .panelContainer {
-    width: 60%;
+    min-width: 300px;
   }
   .contact {
     flex-direction: column;
