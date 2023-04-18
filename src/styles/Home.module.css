@@ -473,7 +473,7 @@ transform: rotate(-45deg) translate(4px, -2px);
       width: 60%;
   }
   .panel {
-      width: 80%;
+      width: 60%;
       display: flex;
       justify-content: center;
       margin-bottom: 4em;
