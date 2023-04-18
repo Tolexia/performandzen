@@ -47,14 +47,8 @@ function Home(pageProps) {
       }, 100);
       subpanel.style.transform = "perspective(400px) rotateY(0deg) rotateX(0deg)";
       subpanel.style.animation = styles.visitcard3D+' 10s linear 1s infinite alternate'  }
- /*Fi+  effet 3D parallax*/
 
-  function toggleActiveMenu()
-  {
-      const navlist = document.querySelector('nav ul');
-      navlist.classList.toggle(styles.active)
-  }
-  
+    let [activeMenu, setactiveMenu] = useState(null);
   useEffect(() => {
     let myPanel = document.getElementById("panel");
     let subpanel = document.getElementById("panel-container");
@@ -91,20 +85,20 @@ function Home(pageProps) {
         <title>Perform&Zen</title>
         <meta name="description" content="Coaching et consulting pour les particuliers et les entreprises. Méthode LEAN et Techniques d'optimisation du potentiel" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        {/* <link rel="icon" href="/images/logo.png" /> */}
       </Head>
       <div className={styles.herobanner} >
         <header className={styles.header}>
             <img loading = 'lazy' src={"/images/logo.png"} width={140} className={styles.logo} alt='perform&zen logo de la marque'/>
-            <nav className={styles.nav}>
+            <nav className={[styles.nav, activeMenu].join(' ')}>
                 <ul>
                     <li><a>Prestations aux professionnels</a></li>
                     <li><a>Prestations aux particuliers</a></li>
-                    <li><a href = "#contact" onClick={e=>toggleActiveMenu()}>Contact</a></li>
+                    <li><a href = "#contact" onClick={e=>setactiveMenu(null)}>Contact</a></li>
                 </ul>
             </nav>
             <div className={styles.burger}>
-                <input type="checkbox" onChange={e=>toggleActiveMenu()}/>
+                <input type="checkbox" onChange={e=>setactiveMenu(activeMenu == null ? styles.active : null)}/>
                 <span></span>
                 <span></span>
                 <span></span>

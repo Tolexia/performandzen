@@ -10,7 +10,15 @@
 }
 
 .header {
-  padding: 0 1em;display:flex;justify-content:space-between;width:100%;align-items:center;height: fit-content;
+  padding: 0 1em;
+  display:flex;
+  justify-content:space-between;
+  width:100%;
+  align-items:center;
+  height: fit-content;
+  color: white;
+  position: absolute;
+  z-index: 5;
 }
 .mousewheel {
   border: 2px solid white; border-radius: 12px;position: absolute;z-index: 4;left: 50%;top: 95%;transform:  translateX(-50%) rotate(90deg);width: 2em;height: 1.25em;
@@ -165,14 +173,9 @@
   width: 30px;height: auto; filter: invert(1);
 }
 
-.header {
-  /* background-color: black; */
-  color: white;
-  position: absolute;
-  z-index: 5;
-}
 .nav a {
   text-decoration: none;
+  text-shadow: 0 0 3px BLACK;
 }
 .filter {
   position: absolute;
@@ -579,6 +582,7 @@ transform: rotate(-45deg) translate(4px, -2px);
   }
   .nav a {
       color: #0e0e0e;
+      text-shadow: none;
   }
 
 

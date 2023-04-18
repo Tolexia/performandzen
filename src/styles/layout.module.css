@@ -1,157 +1,44 @@
-.mainwrapper {
-    margin-top: 3em;
-}
-
-.itemDescription {
-    display: inline-flex;
-    flex-direction: column;
-    font-size: 14px;
-}
-.cartItem {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-}
-
-.cartItem img {
-    margin-right: 10px;
-}
-
-.removal {
-    cursor: pointer;
-}
-.logolink {
-    display: flex;
-    align-items: center;
-}
-/* Navbar */
+.header {
+    padding: 0 1em;
+    display:flex;
+    justify-content:space-between;
+    width:100%;
+    align-items:center;
+    height: fit-content;
+    color: white;
+    background-color: black;
+  }
 .nav {
-    display: flex;
-    justify-content: space-between;
     width: 100%;
-    padding-top: 2em;
-    padding-bottom: 3em;
-    border-bottom: 1px solid rgba(210, 210, 210, 0.461);
-}
-
-.navLeft {
-    width: 70%;
-    display: flex;
-    align-items: center;
-}
-
-.navLeft a {
-    margin-right: 2em;
-}
-
-.navRight {
-    width: 15%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
-.navRight.active {
-    display: none;
-}
-.brand {
-    font-size: 25px;
-    font-weight: bold;
-}
-
-.avatar {
-    border-radius: 50%;
-    margin-left: 1em;
-}
-
-.cartSection {
-    position: relative;
-}
-
-.cartSection img {
-    cursor: pointer;
-    object-fit: contain;
-}
-
-.cartDisplay {
-    position: absolute;
-    width: 250px;
-    height: max-content;
-    z-index: 2;
-    right:0;
-    background: #fff;
-    box-shadow: 0 4px 8px 0px #000;
-    padding: 10px 0;
-}
-
-
-.cartDisplay .cartDisplayTitle {
-    font-weight: bold;
+  }
+  
+  .nav ul {
+    width: 100%;display:flex;justify-content:flex-end;padding-right:1em;
+  }
+  
+  .nav ul li {
+    display:inline-block;margin-right:12%;
     font-size: 18px;
-    padding: 15px 25px;
-    border-bottom: 1px solid hsl(220, 14%, 75%);
-    width: 100%;
-    display: inline-block;
-}
-
-.cartDisplay p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: max-content;
-    height: 58%;
-    padding: 1em 2em;
-}
-
-.cartDisplay p span{
-    font-size: 12px;
-}
-
-.noactive {
-    display: none;
-}
-
-.itemcount {
-    position: absolute;
-    background-color: red;
-    border-radius: 50%;
-    padding: 2px 5px;
-    font-size: 12px;
-    color: white;
-    left: 22px;
-    top: -6px;
-    font-weight: bold;
-}
-
-.checkout {
-    cursor: pointer;
-    width: 60%;
-    background-color: hsl(26, 100%, 55%);
-    color: white;
-    display: flex;
-    justify-content: center;
-    border: none;
-    padding: 10px;
-    border-radius: 12px;
-    font-weight: bold;
-    margin: 1em auto 0;
-    font-size: 16px;
-}
+  }
+  .nav a {
+    text-decoration: none;
+    text-shadow: 0 0 3px BLACK;
+  }
 
 /* Burger Menu */
 .burger {
     display: none;
     position: absolute;
     top: 37px;
-    left: 40px;
-    z-index: 1;
+    right: 50px;
+    z-index: 5;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-}
-.burger input
-{
+  }
+  .burger input
+  {
   display: block;
   width: 40px;
   height: 32px;
@@ -165,17 +52,17 @@
   z-index: 2; /* and place it over the hamburger */
   
   -webkit-touch-callout: none;
-}
-
-.burger span
-{
+  }
+  
+  .burger span
+  {
   display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
+  width: 40px;
+  height: 6px;
+  margin-bottom: 6px;
   position: relative;
   
-  background: black;
+  background: #fff;
   border-radius: 3px;
   
   z-index: 1;
@@ -183,89 +70,73 @@
   transform-origin: 4px 0px;
   
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
-}
-
-.burger span:first-child
-{
+            background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+            opacity 0.55s ease;
+  }
+  
+  .burger span:first-child
+  {
   transform-origin: 0% 0%;
-}
-
-.burger span:nth-last-child(2)
-{
+  }
+  
+  .burger span:nth-last-child(2)
+  {
   transform-origin: 0% 100%;
-}
-
-.burger input:checked ~ span
-{
+  }
+  
+  .burger input:checked ~ span
+  {
   opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
-}
-
-.burger input:checked ~ span:nth-last-child(3)
-{
+  transform: rotate(45deg) translate(-2px, -3px);
+  background: #000000;
+  }
+  
+  .burger input:checked ~ span:nth-last-child(3)
+  {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
-}
+  }
+  
+  .burger input:checked ~ span:nth-last-child(2)
+  {
+  transform: rotate(-45deg) translate(4px, -2px);
+  }
 
-.burger input:checked ~ span:nth-last-child(2)
+  .main {
+    min-height: 70vh;
+  }
+@media screen and (max-width:960px) 
 {
-  transform: rotate(-45deg) translate(0, -1px);
-}
-
-
-@media screen and (max-width:1000px) 
-{
-    .avatar {
+    .nav ul {
         display: none;
-    }
-    .test {
-        width: 30px;
-        height: 30px;
-    }
-    .itemcount {
-        padding:3px 6px;
-        font-size: 15px;
-        left: 20px;
-        top: -11px;;
-    }
-    .nav {
-        width: 100%;
-    }
-    .navLeft {
-        justify-content:space-between;
-        flex-direction: column;
-        height: 80vh;
-        padding-top: 5em;
+        height: 100vh;
         width: 100vw;
-        position: sticky;
+        flex-direction: column;
+        position: absolute;
         top: 0;
         left: 0;
+        right: 0;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: 25px;
+        background-color: antiquewhite;
+        z-index: 5;
+        margin-top: 0;
+        color: #0e0e0e;
+        padding: 0;
+        margin: auto;
     }
-    .navLeft a {
-        margin-right: 0;
+  
+    .nav ul.active {
+        display: flex;
     }
-    .navLeft:not(.active) {
-        display: none;
+  
+    .nav ul li {
+        margin: 0;
     }
-    .navLeft.active {
-        display:flex;
-    }
-    .burger {
-        display: block;
+    .nav a {
+        color: #0e0e0e;
+        text-shadow: none;
     }
 
-    .navRight, .logolink {
-        position:absolute;
-    }
-    .navRight {
-        left:78%;
-    }
-
-    .logolink {
-        left:50%;
-        transform: translateX(-50%);
-    }
 }
