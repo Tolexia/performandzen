@@ -2,7 +2,6 @@
   display: flex;
   justify-content: center;
   position: relative;
-  background-image: url('/images/bighandshake.jpg');
   height: 100vh;
   width: 100vw;
   background-position: center;
@@ -11,7 +10,15 @@
 }
 
 .header {
-  padding: 0 1em;display:flex;justify-content:space-between;width:100%;align-items:center;height: fit-content;
+  padding: 0 1em;
+  display:flex;
+  justify-content:space-between;
+  width:100%;
+  align-items:center;
+  height: fit-content;
+  color: white;
+  position: absolute;
+  z-index: 5;
 }
 .mousewheel {
   border: 2px solid white; border-radius: 12px;position: absolute;z-index: 4;left: 50%;top: 95%;transform:  translateX(-50%) rotate(90deg);width: 2em;height: 1.25em;
@@ -30,10 +37,19 @@
 
 .nav ul li {
   display:inline-block;margin-right:12%;
+  font-size: 18px;
 }
 
 .marque {
-  position: absolute;z-index: 4;left: 50%;top: 45%;transform: translate(-50%,-50%);display: flex;flex-direction: column;align-items: center;
+  position: absolute;
+  z-index: 4;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 3em;
 }
 
 .marque h1 {
@@ -86,7 +102,12 @@
 }
 
 .prestations {
-  display: flex;justify-content: space-around;background-image: url('/images/zen-garden.jpg');background-position: center;background-size: cover;padding: 7em 0;flex-wrap: wrap;
+  display: flex;
+  justify-content: space-around;
+  background-position: center;
+  background-size: cover;
+  padding: 7em 0;
+  flex-wrap: wrap;
 }
 
 .prestations div {
@@ -95,7 +116,7 @@
   border: none;
   border-radius: 4px;
   background-color: #f8e9dd82;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(7px);
   min-width: 350px;
 }
 
@@ -113,21 +134,24 @@
 }
 
 .contact {
-  display: flex;justify-content: space-evenly;margin-top: 5em;
+  display: flex;justify-content: center;margin-top: 5em;
 }
 
 .contact .panel {
   width: 50%;position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 .contact .panelContainer {
-  border-radius:12px;width:80%;min-width: 500px;height: auto;
+  border-radius:12px;width:50%;min-width: 300px;height: auto;
   animation : visitcart3D 3s linear 1s infinite alternate;
   -webkit-animation : visitcart3D 3s linear 1s infinite alternate;
 }
 
 .contact div:last-child {
   display: flex;flex-direction: column;width: 20%;text-align: center;
+  justify-content: flex-start;
 }
 
 .contact div:last-child h2 {
@@ -151,14 +175,9 @@
   width: 30px;height: auto; filter: invert(1);
 }
 
-.header {
-  /* background-color: black; */
-  color: white;
-  position: absolute;
-  z-index: 5;
-}
 .nav a {
   text-decoration: none;
+  text-shadow: 0 0 3px BLACK;
 }
 .filter {
   position: absolute;
@@ -298,11 +317,12 @@ transform: rotate(-45deg) translate(4px, -2px);
       opacity: 1
   }
 }
-#panel-container {
+.panelContainer {
   /* background-size: cover; */
-  transform: perspective(400px) rotateX(0deg) rotateY(0deg);
+  /* transform: perspective(400px) rotateX(0deg) rotateY(0deg); */
   transform-style: preserve-3d;
   box-shadow: 1.5rem 2.5rem 5rem 0.7rem rgba(0,0,0,0.13);
+  animation: visitcard3D 15s linear 1s infinite alternate;
 }
 .panelContent {
   color: black;
@@ -392,70 +412,85 @@ transform: rotate(-45deg) translate(4px, -2px);
               transform: translateY(0);
   }
 }
-@-webkit-keyframes visitcart3D {
-  0% {
-      -webkit-transform: perspective(400px) rotateY(0deg) rotateX(0deg)!important;
-      transform: perspective(400px) rotateY(0deg) rotateX(0deg)!important;
-      
-  }
-  20% {
-      -webkit-transform: perspective(400px) rotateY(10deg) rotateX(10deg)!important;
-      transform: perspective(400px) rotateY(10deg) rotateX(10deg)!important;
-      
-  }
-  40% {
-      -webkit-transform: perspective(400px) rotateY(10deg) rotateX(-10deg)!important;
-      transform: perspective(400px) rotateY(10deg) rotateX(-10deg)!important;
-      
-  }
-  60% {
-      -webkit-transform: perspective(400px) rotateY(-10deg) rotateX(-10deg)!important;
-      transform: perspective(400px) rotateY(-10deg) rotateX(-10deg)!important;
-      
-  }
-  80% {
-      -webkit-transform: perspective(400px) rotateY(-10deg) rotateX(10deg)!important;
-      transform: perspective(400px) rotateY(-10deg) rotateX(10deg)!important;
-      
-  }
-  100% {
-    -webkit-transform: perspective(400px) rotateY(0deg) rotateX(0deg)!important;
-    transform: perspective(400px) rotateY(0deg) rotateX(0deg)!important;
-  }
-  }
-  @keyframes visitcart3D {
+@-webkit-keyframes visitcard3D {
     0% {
-      -webkit-transform: perspective(400px) rotateY(0deg) rotateX(0deg)!important;
-      transform: perspective(400px) rotateY(0deg) rotateX(0deg)!important;
-      
+      -webkit-transform: perspective(400px) rotateX(-7deg) rotateY(-7deg);
+      transform: perspective(400px) rotateX(-7deg) rotateY(-7deg);
+    }
+    20% {
+      -webkit-transform: perspective(400px) rotateX(7deg) rotateY(-7deg);
+      transform: perspective(400px) rotateX(7deg) rotateY(-7deg);
+    }
+    50% {
+      -webkit-transform: perspective(400px) rotateX(7deg) rotateY(7deg);
+      transform: perspective(400px) rotateX(7deg) rotateY(7deg);
+    }
+    75% {
+      -webkit-transform: perspective(400px) rotateX(-7deg) rotateY(7deg);
+      transform: perspective(400px) rotateX(-7deg) rotateY(7deg);
+    }
+    100% {
+      -webkit-transform: perspective(400px) rotateX(-7deg) rotateY(-7deg);
+      transform: perspective(400px) rotateX(-7deg) rotateY(-7deg);
+    }
   }
-  20% {
-      -webkit-transform: perspective(400px) rotateY(5deg) rotateX(5deg)!important;
-      transform: perspective(400px) rotateY(5deg) rotateX(5deg)!important;
-      
+  @keyframes visitcard3D {
+    0% {
+      -webkit-transform: perspective(400px) rotateX(-7deg) rotateY(-7deg);
+      transform: perspective(400px) rotateX(-7deg) rotateY(-7deg);
+    }
+    25% {
+      -webkit-transform: perspective(400px) rotateX(7deg) rotateY(-7deg);
+      transform: perspective(400px) rotateX(7deg) rotateY(-7deg);
+    }
+    50% {
+      -webkit-transform: perspective(400px) rotateX(7deg) rotateY(7deg);
+      transform: perspective(400px) rotateX(7deg) rotateY(7deg);
+    }
+    75% {
+      -webkit-transform: perspective(400px) rotateX(-7deg) rotateY(7deg);
+      transform: perspective(400px) rotateX(-7deg) rotateY(7deg);
+    }
+    100% {
+      -webkit-transform: perspective(400px) rotateX(-7deg) rotateY(-7deg);
+      transform: perspective(400px) rotateX(-7deg) rotateY(-7deg);
+    }
+}
+@media screen and (min-width:2401px) 
+{
+  .herobanner {
+    background-image: url('/images/bighandshake.jpg');
   }
-  40% {
-      -webkit-transform: perspective(400px) rotateY(5deg) rotateX(-5deg)!important;
-      transform: perspective(400px) rotateY(5deg) rotateX(-5deg)!important;
-      
-  }
-  60% {
-      -webkit-transform: perspective(400px) rotateY(-5deg) rotateX(-5deg)!important;
-      transform: perspective(400px) rotateY(-5deg) rotateX(-5deg)!important;
-      
-  }
-  80% {
-      -webkit-transform: perspective(400px) rotateY(-5deg) rotateX(5deg)!important;
-      transform: perspective(400px) rotateY(-5deg) rotateX(5deg)!important;
-      
-  }
-  100% {
-    -webkit-transform: perspective(400px) rotateY(0deg) rotateX(0deg)!important;
-    transform: perspective(400px) rotateY(0deg) rotateX(0deg)!important;
+  .prestations {
+    background-image: url('/images/zen-garden.jpg');
   }
 }
-@media screen and (max-width:1300px) 
+@media screen and (max-width:2400px) 
 {
+  .herobanner {
+    background-image: url('/images/handshake-2400.jpg');
+  }
+  .prestations {
+    background-image: url('/images/zengarden-2400.jpg');
+  }
+}
+@media screen and (max-width:1920px) 
+{
+  .herobanner {
+    background-image: url('/images/handshake-1920.jpg');
+  }
+  .prestations {
+    background-image: url('/images/zengarden-1920.jpg');
+  }
+}
+@media screen and (max-width:1280px) 
+{
+  .herobanner {
+    background-image: url('/images/handshake-1280.jpg');
+  }
+  .prestations {
+    background-image: url('/images/zengarden-1280.jpg');
+  }
   .presentation > div {
       transform: translate(0, 3%);
   }
@@ -467,7 +502,7 @@ transform: rotate(-45deg) translate(4px, -2px);
       font-size: 22px;
   }
   .main p {
-      font-size: 22px;
+      font-size: 20px;
   }
 
   .main h2 {
@@ -492,7 +527,17 @@ transform: rotate(-45deg) translate(4px, -2px);
       width: 60%;
   }
   .panel {
-      display: none;
+      width: 60%;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 4em;
+  }
+  .contact .panelContainer {
+    min-width: 300px;
+  }
+  .contact {
+    flex-direction: column;
+    align-items: center;
   }
   .contact>div:last-child {
       width: 80%;
@@ -539,6 +584,7 @@ transform: rotate(-45deg) translate(4px, -2px);
   }
   .nav a {
       color: #0e0e0e;
+      text-shadow: none;
   }
 
 
@@ -553,5 +599,18 @@ transform: rotate(-45deg) translate(4px, -2px);
 
   .contact div:last-child a:last-child img {
     width: 40px;
+  }
+  .panelContainer {
+    animation: visitcard3D 5s linear 1s infinite alternate;
+  }
+}
+
+@media screen and (max-width:640px) 
+{
+  .herobanner {
+    background-image: url('/images/handshake-640.jpg');
+  }
+  .prestations {
+    background-image: url('/images/zengarden-640.jpg');
   }
 }

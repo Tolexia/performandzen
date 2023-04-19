@@ -25,7 +25,7 @@ function Home(pageProps) {
 
       const percentX = (mouseX - centerX) / (myPanel.clientWidth / 2);
       const percentY = -((mouseY - centerY) / (myPanel.clientHeight / 2));
-
+      subpanel.style.animation = "unset";
       subpanel.style.transform = "perspective(400px) rotateY(" + percentX * transformAmount + "deg) rotateX(" + percentY * transformAmount + "deg)";
   }
 
@@ -35,6 +35,8 @@ function Home(pageProps) {
           subpanel.style.transition = "";
       }, 100);
       subpanel.style.transition = "transform 0.1s";
+      subpanel.style.animation = "unset";
+      subpanel.style.transform = "perspective(400px) rotateX(0deg) rotateY(0deg);";
   }
 
   function handleMouseLeave() {
@@ -43,17 +45,10 @@ function Home(pageProps) {
       setTimeout(() => {
           subpanel.style.transition = "";
       }, 100);
-
       subpanel.style.transform = "perspective(400px) rotateY(0deg) rotateX(0deg)";
-  }
-  /*Fin effet 3D parallax*/
+      subpanel.style.animation = styles.visitcard3D+' 10s linear 1s infinite alternate'  }
 
-  function toggleActiveMenu()
-  {
-      const navlist = document.querySelector('nav ul');
-      navlist.classList.toggle(styles.active)
-  }
-  
+    let [activeMenu, setactiveMenu] = useState(null);
   useEffect(() => {
     let myPanel = document.getElementById("panel");
     let subpanel = document.getElementById("panel-container");
@@ -90,20 +85,20 @@ function Home(pageProps) {
         <title>Perform&Zen</title>
         <meta name="description" content="Coaching et consulting pour les particuliers et les entreprises. Méthode LEAN et Techniques d'optimisation du potentiel" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        {/* <link rel="icon" href="/images/logo.png" /> */}
       </Head>
       <div className={styles.herobanner} >
         <header className={styles.header}>
-            <img src={"/images/logo.png"} width={140} className={styles.logo} alt='perform&zen logo'/>
-            <nav className={styles.nav}>
+            <img loading = 'lazy' src={"/images/logo.png"} width={140} className={styles.logo} alt='perform&zen logo de la marque'/>
+            <nav className={[styles.nav, activeMenu].join(' ')}>
                 <ul>
                     <li><a>Prestations aux professionnels</a></li>
                     <li><a>Prestations aux particuliers</a></li>
-                    <li><a href = "#contact" onClick={e=>toggleActiveMenu()}>Contact</a></li>
+                    <li><a href = "#contact" onClick={e=>setactiveMenu(null)}>Contact</a></li>
                 </ul>
             </nav>
             <div className={styles.burger}>
-                <input type="checkbox" onChange={e=>toggleActiveMenu()}/>
+                <input type="checkbox" onChange={e=>setactiveMenu(activeMenu == null ? styles.active : null)}/>
                 <span></span>
                 <span></span>
                 <span></span>
@@ -148,7 +143,7 @@ function Home(pageProps) {
                     Mon approche, de manière générale, consiste à m&apos;appuyer sur mon expérience acquise ainsi que sur les outils classiques de l&apos;accompagnement en optimisation du potentiel et de les associer à des méthodes originales et novatrices afin d&apos;obtenir de meilleures performances.
                 </p>
             </div>
-            <img src={"/images/photo site.jpeg"} alt="" />
+            <img loading = 'lazy' src={"/images/photo site.jpeg"} alt="" />
         </section> */}
         <section className={styles.prestations}>
             <div className={[styles.slidetop, styles.hidden].join(' ')} >
@@ -176,14 +171,14 @@ function Home(pageProps) {
         </section>
         <section id = "contact" className={styles.contact} >
             <div id="panel"  className={styles.panel} >
-                <img id="panel-container" className={styles.panelContainer}  src={"/images/png_20220724_153350_0000.PNG"} alt=''/>
+                <img loading = 'lazy' id="panel-container" className={styles.panelContainer}  src={"/images/png_20220724_153350_0000.PNG"} alt=''/>
             </div>
             <div>
                 <h2>Contact</h2>
                 <b>Christelle CROIZÉ</b>
                 <a href = "mailto:performandzen@gmail.com">performandzen@gmail.com</a>
                 <a href = "tel:0675563584">06.75.56.35.84</a>
-                <a className={styles.linkedin}><img src={"/images/logo-linkedin.png"} alt="" /></a>
+                <a className={styles.linkedin}><img loading = 'lazy' src={"/images/logo-linkedin.png"} alt="" /></a>
             </div>
         </section>
     </main>
