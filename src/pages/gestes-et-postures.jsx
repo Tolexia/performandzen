@@ -15,7 +15,7 @@ function GestesEtPostures(pageProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* <link rel="icon" href="/images/logo.png" /> */}
       </Head>
-      <Layout>
+      <Layout menu = "pro">
 
       </Layout>
     </>
