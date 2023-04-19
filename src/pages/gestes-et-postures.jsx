@@ -7,6 +7,9 @@ import Layout from '@/components/layout'
 const inter = Inter({ subsets: ['latin'] })
 
 function GestesEtPostures(pageProps) {
+  const content = <div>
+  <h1>Gestes et Postures</h1>
+</div>
   return (
     <>
       <Head>
@@ -15,8 +18,8 @@ function GestesEtPostures(pageProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* <link rel="icon" href="/images/logo.png" /> */}
       </Head>
-      <Layout menu = "pro">
-
+      <Layout menu = "pro" content = {content}>
+        
       </Layout>
     </>
   )

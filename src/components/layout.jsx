@@ -4,12 +4,12 @@ import React, {useState,useEffect, useImperativeHandle, forwardRef} from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import Footer from '@/components/footer'
-import menuPrestationPro from './menuPrestationPro';
+import MenuPrestationPro from './menuPrestationPro';
 
  const Layout = ((props, {children}) => 
 {
     let [activeMenu, setactiveMenu] = useState(null);
-    const lateralMenu = props.menu == "pro" ? <menuPrestationPro className = {styles.menuLateral} /> : "";
+    const lateralMenu = props.menu == "pro" ? <MenuPrestationPro className = {styles.menuLateral} /> : "";
     useEffect(() => {
     }, [])
     return (
@@ -20,7 +20,7 @@ import menuPrestationPro from './menuPrestationPro';
                     <ul>
                         <li><a>Prestations aux professionnels</a></li>
                         <li><a>Prestations aux particuliers</a></li>
-                        <li><a href = "#contact" onClick={e=>toggleActiveMenu()}>Contact</a></li>
+                        <li><a href = "#contact" onClick={e=>setactiveMenu(null)}>Contact</a></li>
                     </ul>
                 </nav>
                 <div className={styles.burger}>
@@ -33,10 +33,10 @@ import menuPrestationPro from './menuPrestationPro';
             </header>
             <main className={styles.main }>
                 <section className={styles.lateral}>
-
+                    {lateralMenu}
                 </section>
                 <section className={styles.content}>
-                    {children}
+                    {props.content}
                 </section>
             </main>
             <Footer />

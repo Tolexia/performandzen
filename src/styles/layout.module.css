@@ -104,16 +104,25 @@
 
 .main {
   min-height: 70vh;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
 }
 
 .lateral {
 	height: 100%;
-	width: 150px;
-	background-color: black;
+	min-width: 150px;
 	display: flex;
+  flex-direction: column;
 	align-items: center;
+  color: #fff;
+  padding: 2em;
+  font-size: 16px;
 }
 
+.content {
+  padding: 1em;
+  background-color: #ffffffb5;
+}
 
 
 @media screen and (max-width:960px) 

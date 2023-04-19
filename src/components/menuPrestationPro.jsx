@@ -1,8 +1,9 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import React, {useState,useEffect} from 'react'
+import styles from '@/styles/menulateral.module.css'
 
-function menuPrestationPro(props)
+function MenuPrestationPro(props)
 {
     return(
         <div className={styles.menu}>
@@ -16,4 +17,4 @@ function menuPrestationPro(props)
     )
 }
 
-export default menuPrestationPro
+export default MenuPrestationPro
