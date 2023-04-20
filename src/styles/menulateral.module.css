@@ -8,4 +8,5 @@
 .menu {
     background-color: black;
     padding: 2em;
+    position: fixed;
 }

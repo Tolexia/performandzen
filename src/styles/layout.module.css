@@ -120,8 +120,15 @@
 }
 
 .content {
-  padding: 1em;
+  padding: 2em;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
   background-color: #ffffffb5;
+  margin: 1em auto;
+  height: 100%;
+  min-width: 350px;
+  box-shadow: 5px 0 3em #7372728a;
 }
 
 

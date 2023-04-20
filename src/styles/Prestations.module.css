@@ -1,0 +1,27 @@
+.contentformation h1 {
+    text-align: center;
+}
+
+.bloc {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.bloc h2 {
+    margin-top: 0.5em;
+    margin-bottom: 0.25em;
+}
+
+.bloc li {
+    list-style: circle;
+    margin-left: 1em;
+}
+
+.sousbloc {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.sousbloc h4{
+    margin-bottom: 0.5em;
+}
