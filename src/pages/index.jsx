@@ -49,6 +49,22 @@ function Home(pageProps) {
       subpanel.style.animation = styles.visitcard3D+' 10s linear 1s infinite alternate'  }
 
     let [activeMenu, setactiveMenu] = useState(null);
+    const toggleDropdown = () => {
+        const menu = document.getElementById("menu"),
+        splitbutton = document.getElementById("splitbutton"),
+        chevron = document.getElementById("chevron");
+        menu.classList.toggle(styles.open);
+        splitbutton.classList.toggle(styles.open);
+        chevron.innerHTML = !menu.classList.contains(styles.open)
+          ? "expand_more"
+          : "close";
+      };
+      
+      const handleMainButtonClicked = () => toggleDropdown();
+      
+      const handleMenuButtonClicked = () => {
+        toggleDropdown();
+      };
   useEffect(() => {
     let myPanel = document.getElementById("panel");
     let subpanel = document.getElementById("panel-container");
@@ -86,14 +102,28 @@ function Home(pageProps) {
         <meta name="description" content="Coaching et consulting pour les particuliers et les entreprises. Méthode LEAN et Techniques d'optimisation du potentiel" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* <link rel="icon" href="/images/logo.png" /> */}
+        <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0"
+        />
       </Head>
       <div className={styles.herobanner} >
         <header className={styles.header}>
             <img loading = 'lazy' src={"/images/logo.png"} width={140} className={styles.logo} alt='perform&zen logo de la marque'/>
             <nav className={[styles.nav, activeMenu].join(' ')}>
                 <ul>
-                    <li><a>Prestations aux professionnels</a></li>
-                    <li><a>Prestations aux particuliers</a></li>
+                    <li>
+                        <div id = "splitbutton" className={styles.splitbutton}>
+                            <button onClick={e => handleMainButtonClicked()}>Prestations aux professionnels</button>
+                            <button className={styles.toggle} onClick={e => toggleDropdown()}>
+                                <span id="chevron" className={[styles.chevron, "material-symbols-outlined"].join(' ')}>expand_more</span>
+                            </button>
+                            <div id="menu" className={styles.menu}>
+                                <Link href = "/Prestations-pros/gestes-et-postures" >Gestes et postures</Link> 
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href ="">Prestations aux particuliers</a></li>
                     <li><a href = "#contact" onClick={e=>setactiveMenu(null)}>Contact</a></li>
                 </ul>
             </nav>
@@ -153,9 +183,9 @@ function Home(pageProps) {
                     <br/>
                     Tous ces avantages peuvent aider une entreprise à optimiser sa performance globale.
                 </p>
-                <a>
+                <Link href = "/Prestations-pros/gestes-et-postures">
                     Prestations professionnels
-                </a>
+                </Link>
             </div>
             <div  className={[styles.slidebottom, styles.hidden].join(' ')}>
                 <h3 >Particuliers</h3>
@@ -164,9 +194,9 @@ function Home(pageProps) {
                     <br/>
                     Investissez dans vous-même, vous êtes votre meilleur atout : Développez vos compétences et prenez soin de votre bien-être pour améliorer votre carrière.
                 </p>
-                <a>
+                <Link href ="">
                     Prestations particuliers
-                </a>
+                </Link>
             </div>
         </section>
         <section id = "contact" className={styles.contact} >
@@ -176,9 +206,9 @@ function Home(pageProps) {
             <div>
                 <h2>Contact</h2>
                 <b>Christelle CROIZÉ</b>
-                <a href = "mailto:performandzen@gmail.com">performandzen@gmail.com</a>
-                <a href = "tel:0675563584">06.75.56.35.84</a>
-                <a className={styles.linkedin}><img loading = 'lazy' src={"/images/logo-linkedin.png"} alt="" /></a>
+                <Link href = "mailto:performandzen@gmail.com">performandzen@gmail.com</Link>
+                <Link href = "tel:0675563584">06.75.56.35.84</Link>
+                <Link href ="" className={styles.linkedin}><img loading = 'lazy' src={"/images/logo-linkedin.png"} alt="" /></Link>
             </div>
         </section>
     </main>

@@ -1,6 +1,10 @@
 .menu li {
     min-width: max-content;
     list-style: inside;
+    transition: all .4s;
+}
+.menu li:hover {
+    margin-left: 1em;
 }
 .menu li:not(:last-child){
     margin-bottom: 1em;

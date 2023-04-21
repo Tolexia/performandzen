@@ -32,14 +32,100 @@
 }
 
 .nav ul {
-  width: 100%;display:flex;justify-content:flex-end;padding-right:1em;
+  width: 100%;
+  display:flex;
+  align-items: center;
+  justify-content:flex-end;
+  padding-right:1em;
 }
 
 .nav ul li {
   display:inline-block;margin-right:12%;
   font-size: 18px;
 }
+/* Dropdowns */
+.splitbutton {
+  position: relative;
+  display: flex;
+}
+.splitbutton:hover, .splitbutton.open {
+  align-items: center;
+  height: 60px;
+  background: rgba(0, 0, 0, 0.234);
+  border-radius: 8px;
+}
+.splitbutton button:last-of-type{
+  visibility: hidden;
+}
+.splitbutton:hover button:last-of-type {
+  visibility: visible;
+}
 
+.splitbutton button {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  color: #f9f9f9;
+  font-size: 18px;
+  text-shadow: 0 0 3px BLACK;
+  font-family: inherit;
+}
+
+.splitbutton > button:nth-child(1)  {
+  padding: 0 24px;
+}
+
+.splitbutton > button:nth-child(2) {
+  width: 60px;
+  background: rgba(0, 0, 0, 0.18);
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.menu {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 68px;
+  z-index: 1;
+  width: 100%;
+  translate: -30px 0;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.234);
+  transition: 0.4s;
+}
+
+.menu.open {
+  translate: 0 0;
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu > a {
+  display: block;
+  gap: 10px;
+  border: 0;
+  border-radius: 0;
+  width: 100%;
+  /* height: 56px; */
+  padding: 10px 18px;
+  /* vertical-align: middle; */
+  /* margin: auto; */
+}
+
+.menu > a:hover {
+  background: rgba(0, 0, 0, 0.26);
+}
+
+.chevron {
+  margin: auto;
+}
+/* End Dropdowns */
 .marque {
   position: absolute;
   z-index: 4;
@@ -179,6 +265,7 @@
 .nav a {
   text-decoration: none;
   text-shadow: 0 0 3px BLACK;
+  cursor: pointer;
 }
 .filter {
   position: absolute;
@@ -576,17 +663,44 @@ transform: rotate(-45deg) translate(4px, -2px);
       margin: auto;
   }
 
-  .nav ul.active {
+  .nav.active ul {
       display: flex;
   }
 
   .nav ul li {
       margin: 0;
   }
-  .nav a {
-      color: #0e0e0e;
-      text-shadow: none;
+  .splitbutton:hover, .splitbutton.open {
+		background-color: transparent;
+	}
+  .splitbutton button:last-of-type {
+    display: none;
   }
+	.splitbutton.open button {
+		font-weight: bold;
+	}
+	.nav a, .nav button {
+		color: #0e0e0e;
+		text-shadow: none;
+	}
+	.menu {
+		background-color: rgba(0, 0, 0, 0.692);
+		position: absolute;
+	}
+	.menu a {
+		color: white;
+	}
+	.menu a::before {
+		display: inline-block;
+		border-radius: 50%;
+		height: 5px;
+		width: 5px;
+		content: "";
+		border:1px solid rgb(255, 255, 255);
+		vertical-align: middle;
+		margin-right: 1em;
+		margin-left: 1em;
+	}
 
 
   #contact b,#contact a {
