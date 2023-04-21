@@ -21,6 +21,7 @@ function GestesEtPostures(pageProps) {
 		<li>Limiter les risques physiques en adaptant ces compétences sur le poste de travail</li>
 		</ul>
 	</div>
+	<hr />
 	<div className={styles.bloc}>
 		<h2>PUBLIC CONCERNÉ</h2>
 		<p>Toute personne dont l’activité comporte des manutentions manuelles, voulant adapter ses gestes et postures à son poste de travail</p>
@@ -31,6 +32,7 @@ function GestesEtPostures(pageProps) {
 		<h2>DATES</h2>
 		<p>A définir</p>
 	</div>
+	<hr />
 	<div className={styles.bloc}>
 		<h2>PROGRAMME</h2>
 		<div className={styles.sousbloc}>
@@ -68,14 +70,17 @@ function GestesEtPostures(pageProps) {
 		<p>Possibilité d’aborder des sujets utiles et nécessaires, même hors programme, s’ils s’avèrent pertinents</p>
 		</div>
 	</div>
+	<hr />
 	<div className={styles.bloc}>
 		<h2>MODALITÉ D’ÉVALUATION</h2>
 		<p>Questionnaire à l’issue de la formation et pratique évaluée de façon sommative au cours des exercices</p>
   	</div>
+	  <hr />
 	<div className={styles.bloc}>
 		<h2>INTERVENANT</h2>
 		<p>Formation animée par un professionnel formé TOP (techniques d‘optimisation du potentiel), formateur gestes et postures</p>
   	</div>
+	  <hr />
 	<div className={styles.bloc}>
 		<h2>MOYENS PÉDAGOGIQUES</h2>
 		<p>

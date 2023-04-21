@@ -196,14 +196,18 @@
   flex-wrap: wrap;
 }
 
-.prestations div {
+.prestations div:not(.prestationwrapperlink) {
   padding: 2em 2em;
   width: 20%;
   border: none;
   border-radius: 4px;
   background-color: #f8e9dd82;
-  backdrop-filter: blur(7px);
+  backdrop-filter: blur(10px);
   min-width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .prestations div h3 {
@@ -215,8 +219,18 @@
   line-height: 2em;
   /* font-size: 16px; */
 }
+.prestationwrapperlink {
+  height: 100%;
+}
 .prestations div a {
-  margin: 3em auto 1em;display:block;text-align: center;padding: 0.75em 1.5em;background-color: burlywood;color: white;width: fit-content;
+  display:block;
+  text-align: center;
+  padding: 0.75em 1.5em;
+  background-color: burlywood;
+  color: white;
+  width: fit-content;
+  text-decoration: none;
+  margin-top: 2em;
 }
 
 .contact {
@@ -501,7 +515,12 @@ transform: rotate(-45deg) translate(4px, -2px);
   }
 }
 @-webkit-keyframes visitcard3D {
+
     0% {
+      -webkit-transform: perspective(400px) rotateX(0deg) rotateY(0deg);
+      transform: perspective(400px) rotateX(0deg) rotateY(0deg);
+    }
+    10% {
       -webkit-transform: perspective(400px) rotateX(-7deg) rotateY(-7deg);
       transform: perspective(400px) rotateX(-7deg) rotateY(-7deg);
     }
@@ -509,39 +528,51 @@ transform: rotate(-45deg) translate(4px, -2px);
       -webkit-transform: perspective(400px) rotateX(7deg) rotateY(-7deg);
       transform: perspective(400px) rotateX(7deg) rotateY(-7deg);
     }
-    50% {
+    40% {
       -webkit-transform: perspective(400px) rotateX(7deg) rotateY(7deg);
       transform: perspective(400px) rotateX(7deg) rotateY(7deg);
     }
-    75% {
+    65% {
       -webkit-transform: perspective(400px) rotateX(-7deg) rotateY(7deg);
       transform: perspective(400px) rotateX(-7deg) rotateY(7deg);
     }
-    100% {
+    80% {
       -webkit-transform: perspective(400px) rotateX(-7deg) rotateY(-7deg);
       transform: perspective(400px) rotateX(-7deg) rotateY(-7deg);
+    }
+    100% {
+      -webkit-transform: perspective(400px) rotateX(0deg) rotateY(0deg);
+      transform: perspective(400px) rotateX(0deg) rotateY(0deg);
     }
   }
   @keyframes visitcard3D {
     0% {
+      -webkit-transform: perspective(400px) rotateX(0deg) rotateY(0deg);
+      transform: perspective(400px) rotateX(0deg) rotateY(0deg);
+    }
+    10% {
       -webkit-transform: perspective(400px) rotateX(-7deg) rotateY(-7deg);
       transform: perspective(400px) rotateX(-7deg) rotateY(-7deg);
     }
-    25% {
+    20% {
       -webkit-transform: perspective(400px) rotateX(7deg) rotateY(-7deg);
       transform: perspective(400px) rotateX(7deg) rotateY(-7deg);
     }
-    50% {
+    40% {
       -webkit-transform: perspective(400px) rotateX(7deg) rotateY(7deg);
       transform: perspective(400px) rotateX(7deg) rotateY(7deg);
     }
-    75% {
+    65% {
       -webkit-transform: perspective(400px) rotateX(-7deg) rotateY(7deg);
       transform: perspective(400px) rotateX(-7deg) rotateY(7deg);
     }
-    100% {
+    80% {
       -webkit-transform: perspective(400px) rotateX(-7deg) rotateY(-7deg);
       transform: perspective(400px) rotateX(-7deg) rotateY(-7deg);
+    }
+    100% {
+      -webkit-transform: perspective(400px) rotateX(0deg) rotateY(0deg);
+      transform: perspective(400px) rotateX(0deg) rotateY(0deg);
     }
 }
 @media screen and (min-width:2401px) 
@@ -716,7 +747,7 @@ transform: rotate(-45deg) translate(4px, -2px);
     width: 40px;
   }
   .panelContainer {
-    animation: visitcard3D 5s linear 1s infinite alternate;
+    animation: visitcard3D 5s linear 1s infinite;
   }
 }
 

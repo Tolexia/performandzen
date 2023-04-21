@@ -2,6 +2,11 @@
     min-width: max-content;
     list-style: inside;
     transition: all .4s;
+    cursor: pointer;
+}
+
+.menu a {
+    text-decoration: none;
 }
 .menu li:hover {
     margin-left: 1em;

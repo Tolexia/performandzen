@@ -8,9 +8,9 @@ import MenuPrestationPro from './menuPrestationPro';
 
  const Layout = ((props, {children}) => 
 {
-    const toggleDropdown = () => {
-        const menu = document.getElementById("menu"),
-        splitbutton = document.getElementById("splitbutton")
+    const toggleDropdown = (e) => {
+        const splitbutton = e.target.closest('#splitbutton'),
+        menu = splitbutton.querySelector("#menu");
         menu.classList.toggle(styles.open);
         splitbutton.classList.toggle(styles.open);
       };
@@ -27,14 +27,22 @@ import MenuPrestationPro from './menuPrestationPro';
                         <li><Link href = "/">Accueil</Link></li>
                         <li>
                             <div id = "splitbutton" className={styles.splitbutton}>
-                                <button onClick={e => toggleDropdown()}>Prestations aux professionnels</button>
+                                <button onClick={e => toggleDropdown(e)}>Prestations aux professionnels</button>
                                 <div id="menu" className={styles.menu}>
                                     <Link href = "/Prestations-pros/gestes-et-postures" >Gestes et postures</Link> 
                                 </div>
                             </div>
                         </li>
                         <li><Link href = "">Prestations aux particuliers</Link></li>
-                        <li><Link href = "#contact" onClick={e=>setactiveMenu(null)}>Contact</Link></li>
+                        <li>
+                            <div id = "splitbutton" className={styles.splitbutton}>
+                                <button onClick={e => toggleDropdown(e)}>Contact</button>
+                                <div id="menu" className={styles.menu}>
+                                    <Link href = "mailto:performandzen@gmail.com">performandzen@gmail.com</Link>
+                                    <Link href = "tel:0675563584">06.75.56.35.84</Link>
+                                </div>
+                            </div>
+                        </li>
                     </ul>
                 </nav>
                 <div className={styles.burger}>

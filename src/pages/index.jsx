@@ -46,7 +46,7 @@ function Home(pageProps) {
           subpanel.style.transition = "";
       }, 100);
       subpanel.style.transform = "perspective(400px) rotateY(0deg) rotateX(0deg)";
-      subpanel.style.animation = styles.visitcard3D+' 10s linear 1s infinite alternate'  }
+      subpanel.style.animation = styles.visitcard3D+' 10s linear 1s infinite'  }
 
     let [activeMenu, setactiveMenu] = useState(null);
     const toggleDropdown = () => {

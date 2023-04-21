@@ -1,5 +1,5 @@
 .header {
-    padding: 0 1em;
+    /* padding: 0 1em; */
     display:flex;
     justify-content:space-between;
     width:100%;
@@ -110,7 +110,7 @@
 
 .lateral {
 	height: 100%;
-	min-width: 150px;
+	min-width: 350px;
 	display: flex;
   flex-direction: column;
 	align-items: center;
@@ -168,17 +168,19 @@
 }
 
 .menu {
-  overflow: hidden;
-  position: absolute;
-  left: 0;
-  top: 68px;
-  z-index: 1;
-  width: 100%;
-  translate: -30px 0;
-  opacity: 0;
-  visibility: hidden;
-  background: rgb(0, 0, 0);
-  transition: 0.4s;
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	top: 50px;
+	z-index: 1;
+	width: 100%;
+	translate: -30px 0;
+	opacity: 0;
+	visibility: hidden;
+	background: rgb(0 0 0 / 58%);
+	transition: 0.4s;
+	min-width: max-content;
+	border-radius: 8px;
 }
 
 .menu.open {
