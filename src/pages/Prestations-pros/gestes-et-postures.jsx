@@ -51,7 +51,7 @@ function GestesEtPostures(pageProps) {
 		<div className={styles.sousbloc}>
 		<h4>MISE EN PRATIQUE</h4>
 		<ul>
-			<li>Relaxations musculaires directes – dynamisation psycho-physiologique</li>
+			<li>Relaxations musculaires directes - dynamisation psycho-physiologique</li>
 		</ul>
 		</div>
 		<div className={styles.sousbloc}>
@@ -88,6 +88,9 @@ function GestesEtPostures(pageProps) {
 			Divers exercices de mises en pratique
 		</p>
   	</div>
+	<div className={styles.end}>
+		<h5>CONFIDENTIALITÉ - BIENVEILLANCE - ADAPTABILITÉ - ÉCOUTE - PRAGMATISME</h5>
+	</div>
 </div>
   return (
     <>

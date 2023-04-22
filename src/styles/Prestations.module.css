@@ -21,6 +21,13 @@
     margin-left: 1em;
 }
 
+.end {
+    padding-top: 2em;
+}
+.end h5 {
+    text-align: center;
+}
+
 .sousbloc {
     margin-top: 1em;
     margin-bottom: 1em;
