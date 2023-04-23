@@ -12,8 +12,8 @@ export default function Footer()
         </div>
         <div className={styles.footerRight}>
             <div className={styles.links}>
-                <Link href = "/">RGPD</Link>
-                <Link href = "/">Mentions légales</Link>
+                <Link href = "/Mentions-legales">Mentions légales</Link>
+                <Link href = "/fichiers/CONDITIONS-GENERALES-DE-VENTE.pdf" target="_blank" download>CGV</Link>
             </div>
         </div>
     </footer>

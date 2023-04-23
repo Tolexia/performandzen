@@ -750,7 +750,7 @@ transform: rotate(-45deg) translate(4px, -2px);
     width: 40px;
   }
   .panelContainer {
-    animation: visitcard3D 5s linear 1s infinite;
+    animation: visitcard3D 8s linear 1s infinite;
   }
 }
 

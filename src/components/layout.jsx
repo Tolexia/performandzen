@@ -56,10 +56,9 @@ import MenuPrestationPro from './menuPrestationPro';
                     <ul></ul>
                 </div>
             </header>
-            <main className={styles.main }>
-                <section className={styles.lateral}>
-                    {lateralMenu}
-                </section>
+            <main className={styles.main } style={lateralMenu == "" ? {display:"block"} : {}}>
+                { lateralMenu!= "" ? <section className={styles.lateral}>{lateralMenu} </section> : ""}
+                    
                 <section className={styles.content}>
                     {props.content}
                 </section>

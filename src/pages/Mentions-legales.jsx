@@ -64,7 +64,7 @@ function MentionsLegales(pageProps) {
 	<hr />
     <div className={styles.bloc}>
 		<h2>CONDITIONS GÉNÉRALES DE VENTE</h2>
-		<Link href = "/fichiers/CONDITIONS-GENERALES-DE-VENTE.pdf" download>Cliquez ici afin de télécharger les CGV</Link>
+		<Link href = "/fichiers/CONDITIONS-GENERALES-DE-VENTE.pdf" target="_blank" download>Cliquez ici afin de télécharger les CGV</Link>
 	</div>
 </div>
   return (
