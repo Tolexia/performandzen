@@ -25,11 +25,14 @@ import MenuPrestationPro from './menuPrestationPro';
                 <nav className={[styles.nav, activeMenu].join(' ')}>
                     <ul>
                         <li><Link href = "/">Accueil</Link></li>
-                        <li>
+                        <li className={styles.prestationspro}>
                             <div id = "splitbutton" className={styles.splitbutton}>
                                 <button onClick={e => toggleDropdown(e)}>Prestations aux professionnels</button>
                                 <div id="menu" className={styles.menu}>
                                     <Link href = "/Prestations-pros/gestes-et-postures" >Gestes et postures</Link> 
+                                    <Link href = "/Prestations-pros/gestion-du-stress" >Gestion du stress</Link> 
+                                    <Link href="/Prestations-pros/mobiliser-sereinement-ses-ressources">Mobiliser sereinement ses ressources</Link>
+                                    <Link href="/Prestations-pros/optimisation-des-performances">Optimisation des performances</Link>
                                 </div>
                             </div>
                         </li>
@@ -37,7 +40,7 @@ import MenuPrestationPro from './menuPrestationPro';
                         <li>
                             <div id = "splitbutton" className={styles.splitbutton}>
                                 <button onClick={e => toggleDropdown(e)}>Contact</button>
-                                <div id="menu" className={styles.menu}>
+                                <div id="menu" className={styles.menu} style={{transform:"translateX(-25%)"}}>
                                     <Link href = "mailto:performandzen@gmail.com">performandzen@gmail.com</Link>
                                     <Link href = "tel:0675563584">06.75.56.35.84</Link>
                                 </div>

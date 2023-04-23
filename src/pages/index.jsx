@@ -57,14 +57,21 @@ function Home(pageProps) {
         splitbutton.classList.toggle(styles.open);
         chevron.innerHTML = !menu.classList.contains(styles.open)
           ? "expand_more"
-          : "close";
-      };
+		: "close";
+	};
       
-      const handleMainButtonClicked = () => toggleDropdown();
-      
-      const handleMenuButtonClicked = () => {
+	const handleMainButtonClicked = () => toggleDropdown();
+	
+	const handleMenuButtonClicked = () => {
         toggleDropdown();
-      };
+	};
+	const handleClickContact = () => {
+		const checkbox = document.querySelector(`.${styles.burger} input[type=checkbox]`)
+		if(checkbox != null)
+		{
+			checkbox.click()
+		}
+	};
   useEffect(() => {
     let myPanel = document.getElementById("panel");
     let subpanel = document.getElementById("panel-container");
@@ -112,7 +119,7 @@ function Home(pageProps) {
             <img loading = 'lazy' src={"/images/logo.png"} width={140} className={styles.logo} alt='perform&zen logo de la marque'/>
             <nav className={[styles.nav, activeMenu].join(' ')}>
                 <ul>
-                    <li>
+                    <li className={styles.prestationspro}>
                         <div id = "splitbutton" className={styles.splitbutton}>
                             <button onClick={e => handleMainButtonClicked()}>Prestations aux professionnels</button>
                             <button className={styles.toggle} onClick={e => toggleDropdown()}>
@@ -120,11 +127,14 @@ function Home(pageProps) {
                             </button>
                             <div id="menu" className={styles.menu}>
                                 <Link href = "/Prestations-pros/gestes-et-postures" >Gestes et postures</Link> 
+                                <Link href = "/Prestations-pros/gestion-du-stress" >Gestion du stress</Link> 
+                                <Link href="/Prestations-pros/mobiliser-sereinement-ses-ressources">Mobiliser sereinement ses ressources</Link>
+                                <Link href="/Prestations-pros/optimisation-des-performances">Optimisation des performances</Link>
                             </div>
                         </div>
                     </li>
                     <li><a href ="">Prestations aux particuliers</a></li>
-                    <li><a href = "#contact" onClick={e=>setactiveMenu(null)}>Contact</a></li>
+                    <li><a href = "#contact" onClick={e=>handleClickContact()}>Contact</a></li>
                 </ul>
             </nav>
             <div className={styles.burger}>

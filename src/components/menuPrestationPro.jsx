@@ -9,9 +9,9 @@ function MenuPrestationPro(props)
         <div className={styles.menu}>
             <ul>
                 <li><Link href="/Prestations-pros/gestes-et-postures">Gestes et Postures</Link></li>
-                <li><Link href="/">Gestion du stress</Link></li>
-                <li><Link href="/">Mobiliser sereinement ses ressources</Link></li>
-                <li><Link href="/">Optimisation des performances</Link></li>
+                <li><Link href = "/Prestations-pros/gestion-du-stress" >Gestion du stress</Link> </li>
+                <li><Link href="/Prestations-pros/mobiliser-sereinement-ses-ressources">Mobiliser sereinement ses ressources</Link></li>
+                <li><Link href="/Prestations-pros/optimisation-des-performances">Optimisation des performances</Link></li>
             </ul>
         </div>
     )
