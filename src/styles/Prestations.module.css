@@ -36,3 +36,8 @@
 .sousbloc h4{
     margin-bottom: 0.5em;
 }
+
+.bloc p {
+    line-height: 1.5;
+    margin-top: 1em;
+}

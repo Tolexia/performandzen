@@ -5,8 +5,14 @@ import '@/styles/globals.css'
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+import { Analytics } from'@vercel/analytics/react';
 
 export default function App({ Component, pageProps }) {
   
-  return <Component {...pageProps} />
+	return(   
+		<>     
+			<Component {...pageProps} />     
+			<Analytics />   
+		</>
+	);
 }
