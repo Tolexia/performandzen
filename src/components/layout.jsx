@@ -36,7 +36,17 @@ import MenuPrestationPro from './menuPrestationPro';
                                 </div>
                             </div>
                         </li>
-                        <li><Link href = "">Prestations aux particuliers</Link></li>
+                        <li className={styles.prestationspro}>
+                            <div id = "splitbutton" className={styles.splitbutton}>
+                                <button onClick={e => handleMainButtonClicked(e)}>Prestations aux particuliers</button>
+                                <button className={styles.toggle} onClick={e => toggleDropdown(e)}>
+                                    <span id="chevron" className={[styles.chevron, "material-symbols-outlined"].join(' ')}>expand_more</span>
+                                </button>
+                                <div id="menu" className={styles.menu}>
+                                    <Link href = "/Prestations-particuliers/amelioration-du-sommeil" >Amélioration du sommeil</Link> 
+                                </div>
+                            </div>
+                        </li>
                         <li>
                             <div id = "splitbutton" className={styles.splitbutton}>
                                 <button onClick={e => toggleDropdown(e)}>Contact</button>

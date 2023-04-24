@@ -49,10 +49,10 @@ function Home(pageProps) {
       subpanel.style.animation = styles.visitcard3D+' 10s linear 1s infinite'  }
 
     let [activeMenu, setactiveMenu] = useState(null);
-    const toggleDropdown = () => {
-        const menu = document.getElementById("menu"),
-        splitbutton = document.getElementById("splitbutton"),
-        chevron = document.getElementById("chevron");
+    const toggleDropdown = (e) => {
+        const splitbutton = e.target.closest('#splitbutton'),
+        menu = splitbutton.querySelector("#menu"),
+        chevron = splitbutton.querySelector("#chevron");
         menu.classList.toggle(styles.open);
         splitbutton.classList.toggle(styles.open);
         chevron.innerHTML = !menu.classList.contains(styles.open)
@@ -60,10 +60,10 @@ function Home(pageProps) {
 		: "close";
 	};
       
-	const handleMainButtonClicked = () => toggleDropdown();
+	const handleMainButtonClicked = (e) => toggleDropdown(e);
 	
-	const handleMenuButtonClicked = () => {
-        toggleDropdown();
+	const handleMenuButtonClicked = (e) => {
+        toggleDropdown(e);
 	};
 	const handleClickContact = () => {
 		const checkbox = document.querySelector(`.${styles.burger} input[type=checkbox]`)
@@ -121,8 +121,8 @@ function Home(pageProps) {
                 <ul>
                     <li className={styles.prestationspro}>
                         <div id = "splitbutton" className={styles.splitbutton}>
-                            <button onClick={e => handleMainButtonClicked()}>Prestations aux professionnels</button>
-                            <button className={styles.toggle} onClick={e => toggleDropdown()}>
+                            <button onClick={e => handleMainButtonClicked(e)}>Prestations aux professionnels</button>
+                            <button className={styles.toggle} onClick={e => toggleDropdown(e)}>
                                 <span id="chevron" className={[styles.chevron, "material-symbols-outlined"].join(' ')}>expand_more</span>
                             </button>
                             <div id="menu" className={styles.menu}>
@@ -133,7 +133,17 @@ function Home(pageProps) {
                             </div>
                         </div>
                     </li>
-                    <li><a href ="">Prestations aux particuliers</a></li>
+                    <li className={styles.prestationspro}>
+                        <div id = "splitbutton" className={styles.splitbutton}>
+                            <button onClick={e => handleMainButtonClicked(e)}>Prestations aux particuliers</button>
+                            <button className={styles.toggle} onClick={e => toggleDropdown(e)}>
+                                <span id="chevron" className={[styles.chevron, "material-symbols-outlined"].join(' ')}>expand_more</span>
+                            </button>
+                            <div id="menu" className={styles.menu}>
+                                <Link href = "/Prestations-particuliers/amelioration-du-sommeil" >Amélioration du sommeil</Link> 
+                            </div>
+                        </div>
+                    </li>
                     <li><a href = "#contact" onClick={e=>handleClickContact()}>Contact</a></li>
                 </ul>
             </nav>
@@ -211,7 +221,7 @@ function Home(pageProps) {
         </section>
         <section id = "contact" className={styles.contact} >
             <div id="panel"  className={styles.panel} >
-                <img loading = 'lazy' id="panel-container" className={styles.panelContainer}  src={"/images/png_20220724_153350_0000.PNG"} alt=''/>
+                <img loading = 'lazy' id="panel-container" className={styles.panelContainer}  src={"/images/png_20220724_153350_0000.PNG"} alt="Image type carte de visite de la société Perform and Zen comportant sa devise : sLe corps et l'esprit au service de la performance"/>
             </div>
             <div>
                 <h2>Contact</h2>

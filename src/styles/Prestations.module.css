@@ -6,11 +6,28 @@
     border: 1px solid rgba(158, 156, 156, 0.351);
     /* margin:0 auto; */
 }
+.contentformation .banner {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+.contentformation img {
+    max-width: 100%;
+    max-height: 300px;
+    margin: auto;
+}
 .bloc {
     margin-top: 2em;
     margin-bottom: 2em;
 }
 
+p.prestationparticulier {
+    line-height: 2;
+    max-width: 700px;
+    text-align: center;
+    margin: auto;
+}
 .bloc h2 {
     margin-top: 0.5em;
     margin-bottom: 0.25em;
