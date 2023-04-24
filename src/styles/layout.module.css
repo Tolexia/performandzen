@@ -260,7 +260,7 @@
 	.menu a {
 		color: white;
 	}
-	.menu a::before {
+	/* .menu a::before {
 		display: inline-block;
 		border-radius: 50%;
 		height: 5px;
@@ -270,7 +270,7 @@
 		vertical-align: middle;
 		margin-right: 1em;
 		margin-left: 1em;
-	}
+	} */
 	.burger {
 		display: block;
 	}
