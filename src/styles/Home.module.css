@@ -29,18 +29,20 @@
 
 .nav {
   width: 100%;
+  max-width: 1200px;
 }
 
 .nav ul {
   width: 100%;
   display:flex;
   align-items: center;
-  justify-content:flex-end;
-  padding-right:1em;
+  justify-content:space-around;
+  padding-right:2em;
 }
 
 .nav ul li {
-  display:inline-block;margin-right:12%;
+  display:inline-block;
+  /* margin-right:12%; */
   font-size: 18px;
 }
 /* Dropdowns */
@@ -70,7 +72,7 @@
   cursor: pointer;
   color: #f9f9f9;
   font-size: 18px;
-  text-shadow: 0 0 3px BLACK;
+  text-shadow: 0 0 5px BLACK;
   font-family: inherit;
 }
 
@@ -144,7 +146,7 @@
 }
 
 .marque h1 > span:first-child {
-  font-size: 4.5em;line-height: 0;text-shadow: 1px 1px 5px #0e0e0e;
+  font-size: 4.5em;line-height: 0;text-shadow: 1px 1px 8px #0e0e0e;
 }
 
 .marque h1 > span:last-child {
@@ -152,11 +154,14 @@
 }
 
 .marque h1 > span > span {
-  font-size: 2em;padding: 0;line-height:0.8em;text-shadow: 1px 1px 5px #0e0e0e;
+  font-size: 2em;padding: 0;line-height:0.8em;text-shadow: 1px 1px 8px #0e0e0e;
 }
 
 .marque p {
-  color:rgb(255, 255, 255);font-size: 1.2em;text-shadow:1px 1px 5px #0e0e0e;text-align: center;
+  color:rgb(255, 255, 255);
+  font-size: 1.2em;
+  text-shadow:1px 1px 8px #0e0e0e;
+  text-align: center;
 }
 
 .mouswheel {
@@ -234,7 +239,10 @@
 }
 
 .contact {
-  display: flex;justify-content: center;margin-top: 5em;
+  display: flex;
+  justify-content: center;
+  margin-top: 5em;
+  margin-bottom: 5em;
 }
 
 .contact .panel {
@@ -721,7 +729,10 @@ transform: rotate(-45deg) translate(4px, -2px);
 		position: absolute;
 	}
   .prestationspro .menu {
-    transform:translateX(-7%);
+    transform:translateX(-5%)
+  }
+  .prestationsparticuliers .menu {
+    transform:translateX(1%)
   }
 	.menu a {
 		color: white;

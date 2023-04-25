@@ -133,7 +133,7 @@ function Home(pageProps) {
                             </div>
                         </div>
                     </li>
-                    <li className={styles.prestationspro}>
+                    <li className={styles.prestationsparticuliers}>
                         <div id = "splitbutton" className={styles.splitbutton}>
                             <button onClick={e => handleMainButtonClicked(e)}>Prestations aux particuliers</button>
                             <button className={styles.toggle} onClick={e => toggleDropdown(e)}>
@@ -141,6 +141,9 @@ function Home(pageProps) {
                             </button>
                             <div id="menu" className={styles.menu}>
                                 <Link href = "/Prestations-particuliers/amelioration-du-sommeil" >Amélioration du sommeil</Link> 
+                                <Link href = "/Prestations-particuliers/developper-ses-performances" >Développer ses performances</Link> 
+                                <Link href = "/Prestations-particuliers/gerer-son-stress" >Gérer son stress</Link> 
+                                <Link href = "/Prestations-particuliers/gerer-son-stress" >Réalisation d'objectifs</Link> 
                             </div>
                         </div>
                     </li>
