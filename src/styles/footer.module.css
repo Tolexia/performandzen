@@ -19,7 +19,8 @@
 }
 
 .footerRight {
-    display:flex;flex-direction: column;
+    display:flex;
+    flex-direction: column;
 }
 .footer > div {
     width: 50%;
@@ -52,7 +53,7 @@ footer.footer h6 {
     }
     .footerRight {
         margin-bottom: 1em;
-        align-items: flex-end;
+        align-items: center;
     }
     .footer > div {
         width: 100%;
