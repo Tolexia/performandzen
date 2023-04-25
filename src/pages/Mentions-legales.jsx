@@ -53,8 +53,8 @@ function MentionsLegales(pageProps) {
             <h4>Vercel Web Analytics</h4>
             <p>
                 Cette technologie permet de mesurer et quantifier le traffic des visiteurs du site.<br/>
-                Pour ce faire, chaque visiteur est identifié par un hash arbitraire défini par la requête demandée pour afficher la page et non par une de ses données personnelles telle que son adresse IP.<br/>
-                Cette représentation virtuelle de l&apos;utilisateur est stockée de manière temporaire et non permanente comme dans le cas d&apos;un cookie, et est automatiquement mis au rebout au bout de 24h.<br/> 
+                Pour ce faire, chaque visiteur est identifié par un identifiant crypté défini par la requête demandée pour afficher la page et non par une de ses données personnelles telle que son adresse IP.<br/>
+                Cette représentation virtuelle de l&apos;utilisateur est stockée de manière temporaire et non de manière permanente dans le cas d&apos;un cookie et est automatiquement mis au rebut au bout de 24h.<br/> 
                 Certaines données entièrement anonymes sont récupérées telles que l&apos;url de la page, l&apos;url Referrer (page précédente), le navigateur, le type d&apos;appareil, la ville ainsi que le pays de connexion.<br/>
                 La liste de ces données anonymes ainsi que des explications plus détaillées concernant cette technologie sont disponibles sur la page de politique de confidentialité de cette fonctionnalité sur le site vercel.com à l&apos;adresse suivante : <br/>
                 <Link href = "https://vercel.com/docs/concepts/analytics/privacy-policy">https://vercel.com/docs/concepts/analytics/privacy-policy</Link>
