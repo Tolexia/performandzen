@@ -97,7 +97,7 @@ function GestionDuStress(pageProps) {
     <>
       <Head>
         <title>Gestion du stress</title>
-        <meta name="description" content="Prestation Gestion du stress par Perform&Zen. Prévenez douleurs et blessures par des bonnes pratiques simples." />
+        <meta name="description" content="Prestation pour les professionnels Gestion du stress par Perform&Zen." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* <link rel="icon" href="/images/logo.png" /> */}
       </Head>

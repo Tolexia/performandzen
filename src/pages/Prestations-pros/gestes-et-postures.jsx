@@ -96,7 +96,7 @@ function GestesEtPostures(pageProps) {
     <>
       <Head>
         <title>Gestes et Postures</title>
-        <meta name="description" content="Prestation Gestes et Postures par Perform&Zen. Prévenez douleurs et blessures par des bonnes pratiques simples." />
+        <meta name="description" content="Prestation Gestes et Postures pour les professionnels par Perform&Zen. Prévenez douleurs et blessures par des bonnes pratiques simples." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* <link rel="icon" href="/images/logo.png" /> */}
       </Head>

@@ -113,7 +113,7 @@ function MobilisationRessource(pageProps) {
     <>
       <Head>
         <title>Mobiliser sereinement ses resources</title>
-        <meta name="description" content="Prestation Mobiliser sereinement ses resources par Perform&Zen. Prévenez douleurs et blessures par des bonnes pratiques simples." />
+        <meta name="description" content="Prestation pour les professionnels Mobiliser sereinement ses resources par Perform&Zen." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* <link rel="icon" href="/images/logo.png" /> */}
       </Head>

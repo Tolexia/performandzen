@@ -1,5 +1,6 @@
-.contentformation h1 {
+.contentformation h1, .contentformation h4 {
     text-align: center;
+    color:#55289f;
 }
 .contentformation hr {
     width: 20%;

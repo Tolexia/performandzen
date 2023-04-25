@@ -143,7 +143,7 @@ function Home(pageProps) {
                                 <Link href = "/Prestations-particuliers/amelioration-du-sommeil" >Amélioration du sommeil</Link> 
                                 <Link href = "/Prestations-particuliers/developper-ses-performances" >Développer ses performances</Link> 
                                 <Link href = "/Prestations-particuliers/gerer-son-stress" >Gérer son stress</Link> 
-                                <Link href = "/Prestations-particuliers/gerer-son-stress" >Réalisation d&apos;objectifs</Link> 
+                                <Link href = "/Prestations-particuliers/realiser-ses-objectifs" >Réalisation d&apos;objectifs</Link> 
                             </div>
                         </div>
                     </li>

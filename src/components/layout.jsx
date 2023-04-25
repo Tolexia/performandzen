@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Footer from '@/components/footer'
 import MenuPrestationPro from './menuPrestationPro';
+import MenuPrestationParticulier from './menuPrestationParticulier';
 
  const Layout = ((props, {children}) => 
 {
@@ -15,7 +16,7 @@ import MenuPrestationPro from './menuPrestationPro';
         splitbutton.classList.toggle(styles.open);
       };
     let [activeMenu, setactiveMenu] = useState(null);
-    const lateralMenu = props.menu == "pro" ? <MenuPrestationPro className = {styles.menuLateral} /> : "";
+    const lateralMenu = props.menu == "pro" ? <MenuPrestationPro className = {styles.menuLateral} /> : (props.menu == "particulier" ? <MenuPrestationParticulier className = {styles.menuLateral} /> : "");
     useEffect(() => {
     }, [])
     return (
@@ -43,7 +44,7 @@ import MenuPrestationPro from './menuPrestationPro';
                                     <Link href = "/Prestations-particuliers/amelioration-du-sommeil" >Amélioration du sommeil</Link> 
                                     <Link href = "/Prestations-particuliers/developper-ses-performances" >Développer ses performances</Link> 
                                     <Link href = "/Prestations-particuliers/gerer-son-stress" >Gérer son stress</Link> 
-                                    <Link href = "/Prestations-particuliers/gerer-son-stress" >Réalisation d&apos;objectifs</Link> 
+                                    <Link href = "/Prestations-particuliers/realiser-ses-objectifs" >Réalisation d&apos;objectifs</Link> 
                                 </div>
                             </div>
                         </li>

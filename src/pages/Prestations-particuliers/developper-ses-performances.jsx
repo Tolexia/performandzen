@@ -8,24 +8,22 @@ import styles from '@/styles/Prestations.module.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
-function AmeliorationDuSommeil(pageProps) {
+function DevelopperSesPerformances(pageProps) {
 	const content = <div className={styles.contentformation}>
         <div className={styles.banner}>
 	        <img loading = 'lazy' className={styles.panelContainer} src={"/images/visitcard_long.PNG"} alt="Image type carte de visite de la société Perform and Zen comportant sa devise : sLe corps et l'esprit au service de la performance"/>
         </div>
-	<h1>AMÉLIORATION DU SOMMEIL</h1>
+	<h1>DÉVELOPPER SES PERFORMANCES</h1>
+    <h4>Personnelles et professionnelles</h4>
 	<div className={styles.bloc}>
 		<p className={styles.prestationparticulier}>
-            Le manque de sommeil peut avoir de lourdes
-            conséquences sur votre santé mentale et physique.<br/>
+            Apprenez à éliminer les gaspillages, prévenir les problèmes, mieux vous organiser, intégrer votre bien-être au travail pour être optimum.<br/>
             <br/>
-            Cela peut aller de la difficulté à se concentrer à
-            l&apos;affaiblissement du système immunitaire, jusqu&apos;à des
-            risques de problèmes de santé graves.<br/>
+            Pour cela il existe des techniques diverses à votre disposition :<br/>
             <br/>
-            Avec l&apos;aide des techniques d&apos;optimisation du potentiel
-            je peux vous aider à rétablir une bonne qualité de
-            sommeil.<br/>
+            LEAN Office<br/>
+            Renforcement positif<br/>
+            Projection Mentale de la Réussite<br/>
             <br/>
             Je suis à votre disposition pour un devis personnalisé.
         </p>
@@ -37,8 +35,8 @@ function AmeliorationDuSommeil(pageProps) {
   return (
     <>
       <Head>
-        <title>Amélioration du sommeil</title>
-        <meta name="description" content="Prestation pour les particuliers Amélioration du sommeil, par Perform&Zen." />
+        <title>Développer ses performances</title>
+        <meta name="description" content="Prestation pour les particuliers Développer ses performances par Perform&Zen." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* <link rel="icon" href="/images/logo.png" /> */}
       </Head>
@@ -49,4 +47,4 @@ function AmeliorationDuSommeil(pageProps) {
   )
 }
 
-export default AmeliorationDuSommeil;
+export default DevelopperSesPerformances;
