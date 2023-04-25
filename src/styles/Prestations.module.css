@@ -59,3 +59,77 @@ p.prestationparticulier {
     line-height: 1.5;
     margin-top: 1em;
 }
+
+.bloc .dynamiclist {
+    margin: auto;
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    padding-inline: 1em;
+}
+.bloc .dynamiclist li {
+    margin-bottom: 1em;
+    font-size: 18px;
+    list-style:none;
+    
+    background-image: linear-gradient(
+    to right,
+    #55289f,
+    #55289f 50%,
+    #000 50%
+  );
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  padding: 5px 0;
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.7s ease-in-out;
+}
+.bloc .dynamiclist li::after {
+    content: '';
+    background: #55289f;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    transition: all 0.7s ease-in-out;
+}
+.bloc .dynamiclist li::before {
+    content: '';
+    border-style: solid;
+    border-width: 1px;
+    display: block;
+    /* opacity: 0; */
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 104%;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    border-color: #55289f transparent transparent transparent;
+}
+.bloc .dynamiclist li:hover {
+    background-position: 0;
+}
+.bloc .dynamiclist li:hover::after {
+    width: 100%;
+}
+.bloc .dynamiclist li:hover::before {
+    /* opacity: 1; */
+    visibility: visible;
+    transform:translateY(-50%) rotate(360deg);
+    border-color: #55289f;
+}
+.bloc .dynamiclist a {
+    text-decoration: none;
+    transition: all 0.7s ease-in-out;
+}
+.bloc .dynamiclist a:hover {
+    margin-left: 1em;
+}

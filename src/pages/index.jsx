@@ -206,7 +206,7 @@ function Home(pageProps) {
                     <br/>
                     Tous ces avantages peuvent aider une entreprise à optimiser sa performance globale.
                 </p>
-                <Link href = "/Prestations-pros/gestes-et-postures">
+                <Link href = "/Prestations-pros">
                     Prestations professionnels
                 </Link>
             </div>
@@ -217,7 +217,7 @@ function Home(pageProps) {
                     <br/>
                     Investissez dans vous-même, vous êtes votre meilleur atout : Développez vos compétences et prenez soin de votre bien-être pour améliorer votre carrière.
                 </p>
-                <Link href ="">
+                <Link href ="/Prestations-particuliers">
                     Prestations particuliers
                 </Link>
             </div>
