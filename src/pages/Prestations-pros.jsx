@@ -15,7 +15,7 @@ function PrestationsPros(pageProps) {
         </div>
 	<h1>PRESTATIONS AUX PROFESSIONNELS</h1>
 	<div className={styles.bloc}>
-    <h3>Liens cliquables :</h3>
+    <h5 className={styles.links}>Liens cliquables</h5>
         <ul className={styles.dynamiclist}>
             <li><Link href="/Prestations-pros/gestes-et-postures">Gestes et Postures</Link></li>
             <li><Link href = "/Prestations-pros/gestion-du-stress" >Gestion du stress</Link> </li>

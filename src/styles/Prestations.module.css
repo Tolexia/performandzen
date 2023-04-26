@@ -1,8 +1,9 @@
-.contentformation h1, .contentformation h3 {
+.contentformation h1, .contentformation h5.links {
     text-align: center;
     margin-bottom: 1em;
 }
-.contentformation h3 {
+
+.contentformation h5.links {
     font-style: italic;
 }
 .contentformation h1.violet, .contentformation h4.violet {
@@ -101,12 +102,12 @@ p.prestationparticulier {
     left: 0;
     width: 0;
     height: 2px;
-    transition: all 0.7s ease-in-out 1s;
+    transition: all 0.7s ease-in-out .3s;
 }
 .bloc .dynamiclist li::before {
     content: '';
     border-style: solid;
-    border-width: 1px;
+    border-width: 2px;
     display: block;
     opacity: 0;
     /* visibility: hidden; */
@@ -116,13 +117,14 @@ p.prestationparticulier {
     right: 104%;
     width: 6px;
     height: 6px;
-    transition: all 0.7s ease-in-out;
+    transition: opacity 0.7s ease-in-out, border-color 1.5s ease-in-out, transform 1s ease-in-out;
     border-radius: 50%;
     border-color: #55289f transparent transparent transparent;
 }
 .bloc .dynamiclist li:hover {
     -webkit-text-fill-color: transparent;
     background-position: 0;
+    font-weight: bold;
 }
 .bloc .dynamiclist li:hover::after {
     width: 100%;
@@ -137,7 +139,7 @@ p.prestationparticulier {
     text-decoration: none;
     /* text-decoration: underline; */
     text-underline-offset: 6px;
-    transition: text-decoration 0.7s ease-in-out;
+    transition: all 0.7s ease-in-out;
 }
 .bloc .dynamiclist a::after {
     content: '';
@@ -148,7 +150,7 @@ p.prestationparticulier {
     left: 0;
     width: 100%;
     height: 1px;
-    transition: text-decoration 0.7s ease-in-out 1s;
+    transition: all 0.7s ease-in-out .3s;
 }
 .bloc .dynamiclist li:hover {
    transform: translateX(1em);
