@@ -16,6 +16,7 @@ function PrestationsPros(pageProps) {
         </div>
 		<h1>PRESTATIONS AUX PARTICULIERS</h1>
 		<div className={styles.bloc}>
+      <h3>Liens cliquables :</h3>
 			<ul className={styles.dynamiclist}>
 				<li><Link href = "/Prestations-particuliers/amelioration-du-sommeil" >Amélioration du sommeil</Link> </li>
 				<li><Link href = "/Prestations-particuliers/developper-ses-performances" >Développer ses performances</Link> </li>
