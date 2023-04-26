@@ -1,5 +1,7 @@
 .contentformation h1, .contentformation h4 {
     text-align: center;
+}
+.contentformation h1.violet, .contentformation h4.violet {
     color:#55289f;
 }
 .contentformation hr {
@@ -132,4 +134,19 @@ p.prestationparticulier {
 }
 .bloc .dynamiclist a:hover {
     margin-left: 1em;
+}
+
+@media screen and (max-width:960px)  {
+    .bloc .dynamiclist li::before {
+        /* opacity: 1; */
+        visibility: visible;
+        transform:translateY(-50%) rotate(360deg);
+        border-color: #55289f;
+    }
+    /* .bloc .dynamiclist a {
+        margin-left: 1em;
+    } */
+    .bloc .dynamiclist li::after {
+        width: 100%;
+    }
 }

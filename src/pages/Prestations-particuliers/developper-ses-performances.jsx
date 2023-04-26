@@ -13,7 +13,7 @@ function DevelopperSesPerformances(pageProps) {
         <div className={styles.banner}>
 	        <img loading = 'lazy' className={styles.panelContainer} src={"/images/visitcard_long.PNG"} alt="Image type carte de visite de la société Perform and Zen comportant sa devise : sLe corps et l'esprit au service de la performance"/>
         </div>
-	<h1>DÉVELOPPER SES PERFORMANCES</h1>
+	<h1 className={styles.violet}>DÉVELOPPER SES PERFORMANCES</h1>
     <h4>Personnelles et professionnelles</h4>
 	<div className={styles.bloc}>
 		<p className={styles.prestationparticulier}>
