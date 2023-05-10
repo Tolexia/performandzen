@@ -29,6 +29,9 @@ function PrestationsPros(pageProps) {
     <>
       <Head>
         <title>Prestations aux professionnels</title>
+        <meta name="author" content="Christelle CROIZE" />
+        <meta charset="utf-8" />
+        <meta name="keywords" content="perform&zen, performandzen, méthode LEAN, TOP, bien-être, coaching, formation, optimisation, performance, potentiel" />
         <meta name="description" content="Prestations proposées aux professionnels par PerformandZen." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* <link rel="icon" href="/images/logo.png" /> */}

@@ -107,8 +107,11 @@ function OptimisationPerf(pageProps) {
   return (
     <>
       <Head>
-        <title>Mobiliser sereinement ses resources</title>
-        <meta name="description" content="Prestation pour les professionnels Mobiliser sereinement ses resources par Perform&Zen." />
+        <title>Optimisation des performances</title>
+		<meta name="author" content="Christelle CROIZE" />
+        <meta charset="utf-8" />
+        <meta name="keywords" content="perform&zen, performandzen, méthode LEAN, TOP, bien-être, coaching, formation, optimisation, performance, potentiel" />
+        <meta name="description" content="Prestation pour les professionnels Optimisation des performances par PerformandZen. Exploitez pleinement votre potentiel et tirez meilleur parti de vous-même." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* <link rel="icon" href="/images/logo.png" /> */}
       </Head>

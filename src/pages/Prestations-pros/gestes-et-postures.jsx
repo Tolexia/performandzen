@@ -96,7 +96,10 @@ function GestesEtPostures(pageProps) {
     <>
       <Head>
         <title>Gestes et Postures</title>
-        <meta name="description" content="Prestation Gestes et Postures pour les professionnels par Perform&Zen. Prévenez douleurs et blessures par des bonnes pratiques simples." />
+		<meta name="author" content="Christelle CROIZE" />
+        <meta charset="utf-8" />
+        <meta name="keywords" content="perform&zen, performandzen, méthode LEAN, TOP, bien-être, coaching, formation, optimisation, performance, potentiel" />
+        <meta name="description" content="Prestation Gestes et Postures pour les professionnels par PerformandZen. Prévenez douleurs et blessures par des bonnes pratiques simples à mettre en place." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* <link rel="icon" href="/images/logo.png" /> */}
       </Head>

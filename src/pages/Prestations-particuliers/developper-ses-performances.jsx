@@ -36,7 +36,10 @@ function DevelopperSesPerformances(pageProps) {
     <>
       <Head>
         <title>Développer ses performances</title>
-        <meta name="description" content="Prestation pour les particuliers Développer ses performances par Perform&Zen." />
+        <meta name="author" content="Christelle CROIZE" />
+        <meta charset="utf-8" />
+        <meta name="keywords" content="perform&zen, performandzen, méthode LEAN, TOP, bien-être, coaching, formation, optimisation, performance, potentiel" />
+        <meta name="description" content="Prestation pour les particuliers Développer ses performances par PerformandZen. Optimisez votre potentiel." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* <link rel="icon" href="/images/logo.png" /> */}
       </Head>

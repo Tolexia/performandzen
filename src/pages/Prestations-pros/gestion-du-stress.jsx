@@ -97,7 +97,10 @@ function GestionDuStress(pageProps) {
     <>
       <Head>
         <title>Gestion du stress</title>
-        <meta name="description" content="Prestation pour les professionnels Gestion du stress par Perform&Zen." />
+		<meta name="author" content="Christelle CROIZE" />
+        <meta charset="utf-8" />
+        <meta name="keywords" content="perform&zen, performandzen, méthode LEAN, TOP, bien-être, coaching, formation, optimisation, performance, potentiel" />
+        <meta name="description" content="Prestation pour les professionnels Gestion du stress par PerformandZen. Apprenez à mieux gérer votre stress pour vous sentir bien et être plus efficace." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* <link rel="icon" href="/images/logo.png" /> */}
       </Head>

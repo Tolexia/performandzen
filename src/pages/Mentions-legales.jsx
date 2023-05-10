@@ -71,6 +71,8 @@ function MentionsLegales(pageProps) {
     <>
       <Head>
         <title>Mentions légales</title>
+        <meta name="author" content="Christelle CROIZE"></meta>
+        <meta name="keywords" content="Méthode LEAN, TOP, Bien-être, coaching, formation, optimisation, performance, potentiel"></meta>
         <meta name="description" content="Mentions légales du site performandzen.fr" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* <link rel="icon" href="/images/logo.png" /> */}

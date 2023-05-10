@@ -106,7 +106,10 @@ function Home(pageProps) {
     <main className={styles.main}>
       <Head>
         <title>Perform&Zen</title>
-        <meta name="description" content="Coaching et consulting pour les particuliers et les entreprises. Méthode LEAN et Techniques d'optimisation du potentiel" />
+        <meta name="author" content="Christelle CROIZE" />
+        <meta charset="utf-8" />
+        <meta name="keywords" content="perform&zen, performandzen, méthode LEAN, TOP, bien-être, coaching, formation, optimisation, performance, potentiel" />
+        <meta name="description" content="PerformandZen accompagne professionnels et particuliers dans l'optimisation de leurs performances et leur bien-être au quotidien." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* <link rel="icon" href="/images/logo.png" /> */}
         <link
@@ -116,7 +119,7 @@ function Home(pageProps) {
       </Head>
       <div className={styles.herobanner} >
         <header className={styles.header}>
-            <img loading = 'lazy' src={"/images/logo.png"} width={140} className={styles.logo} alt='perform&zen logo de la marque'/>
+            <img loading = 'lazy' src={"/images/logo.png"} width={140} className={styles.logo} alt='PerformandZen logo de la marque'/>
             <nav className={[styles.nav, activeMenu].join(' ')}>
                 <ul>
                     <li className={styles.prestationspro}>

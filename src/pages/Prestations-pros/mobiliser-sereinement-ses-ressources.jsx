@@ -112,8 +112,11 @@ function MobilisationRessource(pageProps) {
   return (
     <>
       <Head>
-        <title>Mobiliser sereinement ses resources</title>
-        <meta name="description" content="Prestation pour les professionnels Mobiliser sereinement ses resources par Perform&Zen." />
+        <title>Mobiliser sereinement ses ressources</title>
+		<meta name="author" content="Christelle CROIZE" />
+        <meta charset="utf-8" />
+        <meta name="keywords" content="perform&zen, performandzen, méthode LEAN, TOP, bien-être, coaching, formation, optimisation, performance, potentiel" />
+        <meta name="description" content="Prestation pour les professionnels Mobiliser sereinement ses ressources par PerformandZen. Vous détenez déjà les clés, révélez vos aptitudes." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* <link rel="icon" href="/images/logo.png" /> */}
       </Head>
