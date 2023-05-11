@@ -8,6 +8,33 @@ import styles from '@/styles/Prestations.module.css'
 const inter = Inter({ subsets: ['latin'] })
 
 function GestesEtPostures(pageProps) {
+	const articleStructuredData = [{
+		"@context": "https://schema.org",
+		"@type": "Article",
+		headline: "Gestes et Postures",
+		description: 'Programme de la formation pour professionnels "Gestes et Postures", par PerformandZen.',
+		image: "https://www.performandzen.fr/images/png_20220724_153350_0000.PNG",
+		author: {
+			"@type": "Person",
+			"name": "Christelle CROIZE",
+			"url": "https://www.linkedin.com/in/christelle-croize-16a37a240/"
+		},
+	  },
+	  {
+		"@context": "https://schema.org",
+		"@type": "BreadcrumbList",
+		"itemListElement": [{
+		"@type": "ListItem",
+		"position": 1,
+		"name": "Prestations aux professionnels",
+		"item": "https://www.performandzen.fr/Prestations-pros"
+		},{
+		"@type": "ListItem",
+		"position": 2,
+		"name": "Gestes et Postures"
+		}]
+	}
+	];
 	const content = <div className={styles.contentformation}>
 	<h1>PROGRAMME FORMATION</h1>
 	<h1>GESTES ET POSTURES</h1>
@@ -97,6 +124,9 @@ function GestesEtPostures(pageProps) {
       <Head>
         <title>Gestes et Postures</title>
 		<meta name="author" content="Christelle CROIZE" />
+		<script type="application/ld+json">
+			{JSON.stringify(articleStructuredData)}
+		</script>
         <meta charset="utf-8" />
         <meta name="keywords" content="perform&zen, performandzen, méthode LEAN, TOP, bien-être, coaching, formation, optimisation, performance, potentiel" />
         <meta name="description" content="Prestation Gestes et Postures pour les professionnels par PerformandZen. Prévenez douleurs et blessures par des bonnes pratiques simples à mettre en place." />

@@ -9,6 +9,33 @@ import styles from '@/styles/Prestations.module.css'
 const inter = Inter({ subsets: ['latin'] })
 
 function GererSonStress(pageProps) {
+  const articleStructuredData = [{
+		"@context": "https://schema.org",
+		"@type": "Article",
+		headline: "Gérer son stress",
+		description: 'Prestation pour particuliers "Gérer son stress", par PerformandZen.',
+		image: "https://www.performandzen.fr/images/png_20220724_153350_0000.PNG",
+		author: {
+			"@type": "Person",
+			"name": "Christelle CROIZE",
+			"url": "https://www.linkedin.com/in/christelle-croize-16a37a240/"
+		},
+	  },
+	  {
+		"@context": "https://schema.org",
+		"@type": "BreadcrumbList",
+		"itemListElement": [{
+		"@type": "ListItem",
+		"position": 1,
+		"name": "Prestations aux particuliers",
+		"item": "https://www.performandzen.fr/Prestations-particuliers"
+		},{
+		"@type": "ListItem",
+		"position": 2,
+		"name": "Gérer son stress"
+		}]
+	}
+	];
 	const content = <div className={styles.contentformation}>
         <div className={styles.banner}>
 	        <img loading = 'lazy' className={styles.panelContainer} src={"/images/visitcard_long.PNG"} alt="Image type carte de visite de la société Perform and Zen comportant sa devise : sLe corps et l'esprit au service de la performance"/>
@@ -38,6 +65,9 @@ function GererSonStress(pageProps) {
       <Head>
         <title>Gérer son stress</title>
         <meta name="author" content="Christelle CROIZE" />
+        <script type="application/ld+json">
+          {JSON.stringify(articleStructuredData)}
+        </script>
         <meta charset="utf-8" />
         <meta name="keywords" content="perform&zen, performandzen, méthode LEAN, TOP, bien-être, coaching, formation, optimisation, performance, potentiel" />
         <meta name="description" content="Prestation pour les particuliers Gérer son stress par PerformandZen. Apprenez à mieux gérer votre stress pour vous sentir bien et être plus efficace au quotidien." />

@@ -11,8 +11,8 @@ function GestionDuStress(pageProps) {
 	const articleStructuredData = [{
 		"@context": "https://schema.org",
 		"@type": "Article",
-		headline: "Formation: Gestion du Stress",
-		description: "Programme de la formation pour professionnels Gestion du stress, par PerformandZen.",
+		headline: "Gestion du Stress",
+		description: 'Programme de la formation pour professionnels "Gestion du Stress", par PerformandZen.',
 		image: "https://www.performandzen.fr/images/png_20220724_153350_0000.PNG",
 		author: {
 			"@type": "Person",

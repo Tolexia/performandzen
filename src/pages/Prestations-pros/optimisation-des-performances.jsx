@@ -8,6 +8,33 @@ import styles from '@/styles/Prestations.module.css'
 const inter = Inter({ subsets: ['latin'] })
 
 function OptimisationPerf(pageProps) {
+	const articleStructuredData = [{
+		"@context": "https://schema.org",
+		"@type": "Article",
+		headline: "Optimisation des performances",
+		description: 'Programme de la formation pour professionnels "Optimisation des performances", par PerformandZen.',
+		image: "https://www.performandzen.fr/images/png_20220724_153350_0000.PNG",
+		author: {
+			"@type": "Person",
+			"name": "Christelle CROIZE",
+			"url": "https://www.linkedin.com/in/christelle-croize-16a37a240/"
+		},
+	  },
+	  {
+		"@context": "https://schema.org",
+		"@type": "BreadcrumbList",
+		"itemListElement": [{
+		"@type": "ListItem",
+		"position": 1,
+		"name": "Prestations aux professionnels",
+		"item": "https://www.performandzen.fr/Prestations-pros"
+		},{
+		"@type": "ListItem",
+		"position": 2,
+		"name": "Optimisation des performances"
+		}]
+	}
+	];
 	const content = <div className={styles.contentformation}>
 	<h1>PROGRAMME FORMATION</h1>
 	<h1>OPTIMISATION DES PERFORMANCES</h1>
@@ -109,9 +136,12 @@ function OptimisationPerf(pageProps) {
       <Head>
         <title>Optimisation des performances</title>
 		<meta name="author" content="Christelle CROIZE" />
+		<script type="application/ld+json">
+			{JSON.stringify(articleStructuredData)}
+		</script>
         <meta charset="utf-8" />
         <meta name="keywords" content="perform&zen, performandzen, méthode LEAN, TOP, bien-être, coaching, formation, optimisation, performance, potentiel" />
-        <meta name="description" content="Prestation pour les professionnels Optimisation des performances par PerformandZen. Exploitez pleinement votre potentiel et tirez meilleur parti de vous-même." />
+        <meta name="description" content='Prestation pour les professionnels "Optimisation des performances" par PerformandZen. Exploitez pleinement votre potentiel et tirez meilleur parti de vous-même.' />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* <link rel="icon" href="/images/logo.png" /> */}
       </Head>

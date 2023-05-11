@@ -8,6 +8,33 @@ import styles from '@/styles/Prestations.module.css'
 const inter = Inter({ subsets: ['latin'] })
 
 function MobilisationRessource(pageProps) {
+	const articleStructuredData = [{
+		"@context": "https://schema.org",
+		"@type": "Article",
+		headline: "Mobiliser sereinement ses ressources",
+		description: 'Programme de la formation pour professionnels "Mobiliser sereinement ses ressources", par PerformandZen.',
+		image: "https://www.performandzen.fr/images/png_20220724_153350_0000.PNG",
+		author: {
+			"@type": "Person",
+			"name": "Christelle CROIZE",
+			"url": "https://www.linkedin.com/in/christelle-croize-16a37a240/"
+		},
+	  },
+	  {
+		"@context": "https://schema.org",
+		"@type": "BreadcrumbList",
+		"itemListElement": [{
+		"@type": "ListItem",
+		"position": 1,
+		"name": "Prestations aux professionnels",
+		"item": "https://www.performandzen.fr/Prestations-pros"
+		},{
+		"@type": "ListItem",
+		"position": 2,
+		"name": "Mobiliser sereinement ses ressources"
+		}]
+	}
+	];
 	const content = <div className={styles.contentformation}>
 	<h1>PROGRAMME FORMATION</h1>
 	<h1>MOBILISER SEREINEMENT SES RESSOURCES</h1>
@@ -114,6 +141,9 @@ function MobilisationRessource(pageProps) {
       <Head>
         <title>Mobiliser sereinement ses ressources</title>
 		<meta name="author" content="Christelle CROIZE" />
+		<script type="application/ld+json">
+			{JSON.stringify(articleStructuredData)}
+		</script>
         <meta charset="utf-8" />
         <meta name="keywords" content="perform&zen, performandzen, méthode LEAN, TOP, bien-être, coaching, formation, optimisation, performance, potentiel" />
         <meta name="description" content="Prestation pour les professionnels Mobiliser sereinement ses ressources par PerformandZen. Vous détenez déjà les clés, révélez vos aptitudes." />
