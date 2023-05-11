@@ -8,6 +8,33 @@ import styles from '@/styles/Prestations.module.css'
 const inter = Inter({ subsets: ['latin'] })
 
 function GestionDuStress(pageProps) {
+	const articleStructuredData = [{
+		"@context": "https://schema.org",
+		"@type": "Article",
+		headline: "Formation: Gestion du Stress",
+		description: "Programme de la formation pour professionnels Gestion du stress, par PerformandZen.",
+		image: "https://www.performandzen.fr/images/png_20220724_153350_0000.PNG",
+		author: {
+			"@type": "Person",
+			"name": "Christelle CROIZE",
+			"url": "https://www.linkedin.com/in/christelle-croize-16a37a240/"
+		},
+	  },
+	  {
+		"@context": "https://schema.org",
+		"@type": "BreadcrumbList",
+		"itemListElement": [{
+		"@type": "ListItem",
+		"position": 1,
+		"name": "Prestations aux professionnels",
+		"item": "https://www.performandzen.fr/Prestations-pros"
+		},{
+		"@type": "ListItem",
+		"position": 2,
+		"name": "Gestion du stress"
+		}]
+	}
+	];
 	const content = <div className={styles.contentformation}>
 	<h1>PROGRAMME FORMATION</h1>
 	<h1>GESTIONS DU STRESS</h1>
@@ -79,7 +106,7 @@ function GestionDuStress(pageProps) {
 	  <hr />
 	<div className={styles.bloc}>
 		<h2>INTERVENANT</h2>
-		<p>Formation animée par un professionnel formé TOP (techniques d‘optimisation du potentiel), formateur gestes et postures</p>
+		<p>Formation animée par un professionnel formé TOP (techniques d&apos;optimisation du potentiel), formateur gestes et postures</p>
   	</div>
 	  <hr />
 	<div className={styles.bloc}>
@@ -98,6 +125,9 @@ function GestionDuStress(pageProps) {
       <Head>
         <title>Gestion du stress</title>
 		<meta name="author" content="Christelle CROIZE" />
+		<script type="application/ld+json">
+			{JSON.stringify(articleStructuredData)}
+		</script>
         <meta charset="utf-8" />
         <meta name="keywords" content="perform&zen, performandzen, méthode LEAN, TOP, bien-être, coaching, formation, optimisation, performance, potentiel" />
         <meta name="description" content="Prestation pour les professionnels Gestion du stress par PerformandZen. Apprenez à mieux gérer votre stress pour vous sentir bien et être plus efficace." />
