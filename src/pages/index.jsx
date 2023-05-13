@@ -108,6 +108,7 @@ function Home(pageProps) {
         <title>Perform&Zen</title>
         <meta name="author" content="Christelle CROIZE" />
         <meta charset="utf-8" />
+        <meta name="google-site-verification" content="DcE3vPkn00VyAmW5hNhOHdDmbbwLFp7KYamgQv2XHG4" />
         <meta name="keywords" content="perform&zen, performandzen, méthode LEAN, TOP, bien-être, coaching, formation, optimisation, performance, potentiel" />
         <meta name="description" content="PerformandZen accompagne professionnels et particuliers dans l'optimisation de leurs performances et leur bien-être au quotidien." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
