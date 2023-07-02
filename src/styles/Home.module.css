@@ -5,8 +5,9 @@
   height: 100vh;
   width: 100vw;
   background-position: center;
-  background-size: cover;
+  /* background-size: cover; */
   background-attachment: fixed;
+  animation: zoomOut 20s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
 .header {
@@ -30,6 +31,8 @@
 .nav {
   width: 100%;
   max-width: 1200px;
+  -webkit-animation: fade-in-top 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 3.5s both;
+	        animation: fade-in-top 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 3.5s both;
 }
 
 .nav ul {
@@ -44,6 +47,30 @@
   display:inline-block;
   /* margin-right:12%; */
   font-size: 18px;
+}
+.nav ul li:last-child a
+{
+  display: inline-block;
+  position: relative;
+}
+.nav ul li:last-child a::after
+{
+  display: block;
+  content: "";
+  position: absolute;
+  height: 1px;
+  border-bottom: 1px solid black;
+  width: 0;
+  transition: .6s all;
+}
+.nav ul li:last-child a:hover
+{
+  color:#000000;
+  text-shadow: none;
+}
+.nav ul li:last-child a:hover::after
+{
+  width: 100%;
 }
 /* Dropdowns */
 .splitbutton {
@@ -146,22 +173,44 @@
 }
 
 .marque h1 > span:first-child {
-  font-size: 4.5em;line-height: 0;text-shadow: 1px 1px 8px #0e0e0e;
+  font-size: 4.5em;
+  line-height: 0;
+  text-shadow: 1px 1px 8px #0e0e0e;
+  -webkit-animation: fade-in-left 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1s both;
+  animation: fade-in-left 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1s both;
 }
 
 .marque h1 > span:last-child {
-  display: flex;flex-direction: column;justify-content: center;margin-left: 10px;margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10px;
+  margin-top: 10px;
 }
 
 .marque h1 > span > span {
-  font-size: 2em;padding: 0;line-height:0.8em;text-shadow: 1px 1px 8px #0e0e0e;
+  font-size: 2em;
+  padding: 0;
+  line-height:0.8em;
+  text-shadow: 1px 1px 8px #0e0e0e;
 }
-
+.marque h1 > span:last-child > span:first-child
+{
+  -webkit-animation: fade-in-top 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in-top 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+.marque h1 > span:last-child > span:last-child
+{
+  -webkit-animation: fade-in-bottom 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 2s both;
+	        animation: fade-in-bottom 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 2s both;
+}
 .marque p {
   color:rgb(255, 255, 255);
   font-size: 1.2em;
   text-shadow:1px 1px 8px #0e0e0e;
   text-align: center;
+  -webkit-animation: fade-in-fwd 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 3s both;
+	        animation: fade-in-fwd 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 3s both;
 }
 
 .mouswheel {
@@ -236,6 +285,13 @@
   width: fit-content;
   text-decoration: none;
   margin-top: 2em;
+  transition: all .6s;
+}
+
+.prestations div a:hover
+{
+  color:#000000;
+  scale: 1.1;
 }
 
 .contact {
@@ -461,6 +517,146 @@ transform: rotate(-45deg) translate(4px, -2px);
 .hidden {
   opacity: 0;
   transition: opacity .5s;
+}
+.textanimate
+{
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    225deg,
+    #000000 0%,
+    #000000 60%,
+    #b1b1b1 67%,
+    #000000 70%,
+    rgb(0, 0, 0) 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 5s cubic-bezier(.8,.4,.4, .8) infinite;
+  display: inline-block;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+@-webkit-keyframes zoomOut {
+  0% {
+      background-size: 150%;
+  }
+  100% {
+     background-size: 100%;
+  }
+  }
+  @keyframes zoomOut {
+  0% {
+      background-size: 150%;
+  }
+  100% {
+     background-size: 100%;
+  }
+}
+@-webkit-keyframes fade-in-top {
+  0% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-top {
+  0% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade-in-left {
+  0% {
+    -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-left {
+  0% {
+    -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade-in-fwd {
+  0% {
+    -webkit-transform: translateZ(-80px);
+            transform: translateZ(-80px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-fwd {
+  0% {
+    -webkit-transform: translateZ(-80px);
+            transform: translateZ(-80px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
 }
 @-webkit-keyframes slideright {
   0% {
