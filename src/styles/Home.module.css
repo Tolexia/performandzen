@@ -782,37 +782,37 @@ transform: rotate(-45deg) translate(4px, -2px);
 @media screen and (min-width:2401px) 
 {
   .herobanner {
-    background-image: url('/images/bighandshake.jpg');
+    background-image: url('/images/bighandshake.avif');
   }
   .prestations {
-    background-image: url('/images/zen-garden.jpg');
+    background-image: url('/images/zen-garden.avif');
   }
 }
 @media screen and (max-width:2400px) 
 {
   .herobanner {
-    background-image: url('/images/handshake-2400.jpg');
+    background-image: url('/images/handshake-2400.avif');
   }
   .prestations {
-    background-image: url('/images/zengarden-2400.jpg');
+    background-image: url('/images/zengarden-2400.avif');
   }
 }
 @media screen and (max-width:1920px) 
 {
   .herobanner {
-    background-image: url('/images/handshake-1920.jpg');
+    background-image: url('/images/handshake-1920.avif');
   }
   .prestations {
-    background-image: url('/images/zengarden-1920.jpg');
+    background-image: url('/images/zengarden-1920.avif');
   }
 }
 @media screen and (max-width:1280px) 
 {
   .herobanner {
-    background-image: url('/images/handshake-1280.jpg');
+    background-image: url('/images/handshake-1280.avif');
   }
   .prestations {
-    background-image: url('/images/zengarden-1280.jpg');
+    background-image: url('/images/zengarden-1280.avif');
   }
   .presentation > div {
       transform: translate(0, 3%);
@@ -966,9 +966,9 @@ transform: rotate(-45deg) translate(4px, -2px);
 @media screen and (max-width:640px) 
 {
   .herobanner {
-    background-image: url('/images/handshake-640.jpg');
+    background-image: url('/images/handshake-640.avif');
   }
   .prestations {
-    background-image: url('/images/zengarden-640.jpg');
+    background-image: url('/images/zengarden-640.avif');
   }
 }
