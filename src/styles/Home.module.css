@@ -5,9 +5,8 @@
   height: 100vh;
   width: 100vw;
   background-position: center;
-  /* background-size: cover; */
+  background-size: cover;
   background-attachment: fixed;
-  animation: zoomOut 20s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
 .header {
@@ -804,6 +803,13 @@ transform: rotate(-45deg) translate(4px, -2px);
   }
   .prestations {
     background-image: url('/images/zengarden-1920.avif');
+  }
+}
+@media screen and (min-width:1350px) 
+{
+  .herobanner 
+  {
+    animation: zoomOut 20s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
   }
 }
 @media screen and (max-width:1280px) 
