@@ -233,7 +233,7 @@ function Home(pageProps) {
             <div>
                 <h2>Contact</h2>
                 <b>Christelle CROIZÉ</b>
-                <Link href = "mailto:performandzen@gmail.com">performandzen@gmail.com</Link>
+                <Link href = "mailto:performandzen@gmail.com" className={styles.textanimate}>performandzen@gmail.com</Link>
                 <Link href = "tel:0675563584">06.75.56.35.84</Link>
                 <Link href ="" className={styles.linkedin}><img loading = 'lazy' src={"/images/logo-linkedin.png"} alt="" /></Link>
             </div>
