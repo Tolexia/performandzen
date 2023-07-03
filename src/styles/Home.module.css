@@ -30,8 +30,6 @@
 .nav {
   width: 100%;
   max-width: 1200px;
-  -webkit-animation: fade-in-top 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 3.5s both;
-	        animation: fade-in-top 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 3.5s both;
 }
 
 .nav ul {
@@ -78,7 +76,6 @@
 }
 .splitbutton:hover, .splitbutton.open {
   align-items: center;
-  height: 60px;
   background: rgba(0, 0, 0, 0.234);
   border-radius: 8px;
 }
@@ -206,7 +203,7 @@
 .marque p {
   color:rgb(255, 255, 255);
   font-size: 1.2em;
-  text-shadow:1px 1px 8px #0e0e0e;
+  text-shadow:3px 1px 8px #000000;
   text-align: center;
   -webkit-animation: fade-in-fwd 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 3s both;
 	        animation: fade-in-fwd 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 3s both;
@@ -843,8 +840,21 @@ transform: rotate(-45deg) translate(4px, -2px);
       font-size: 22px;
   }
 }
+@media screen and (min-width:961px) 
+{
+  .nav {
+    -webkit-animation: fade-in-top 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 3.5s both;
+    animation: fade-in-top 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 3.5s both;
+  }
+  .splitbutton:hover, .splitbutton.open {
+    height: 60px;
+  }
+}
 @media screen and (max-width:960px) 
 {
+  .menu {
+    top:30px;
+  }
   .prestations {
       flex-direction: column;
       align-items: center;
