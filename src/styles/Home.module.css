@@ -843,8 +843,8 @@ transform: rotate(-45deg) translate(4px, -2px);
 @media screen and (min-width:961px) 
 {
   .nav {
-    -webkit-animation: fade-in-top 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 3.5s both;
-    animation: fade-in-top 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 3.5s both;
+    -webkit-animation: fade-in-top 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1s both;
+    animation: fade-in-top 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1s both;
   }
   .splitbutton:hover, .splitbutton.open {
     height: 60px;

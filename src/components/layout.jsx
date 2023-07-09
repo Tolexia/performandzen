@@ -60,7 +60,8 @@ import MenuPrestationParticulier from './menuPrestationParticulier';
                     </ul>
                 </nav>
                 <div className={styles.burger}>
-                    <input type="checkbox" onChange={e => setactiveMenu(activeMenu == null ? styles.active : null)}/>
+                    <label htmlFor="unused" style={{position:"absolute", left:"9999999"}}></label>
+                    <input id='unused' type="checkbox" onChange={e => setactiveMenu(activeMenu == null ? styles.active : null)}/>
                     <span></span>
                     <span></span>
                     <span></span>

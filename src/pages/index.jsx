@@ -107,7 +107,7 @@ function Home(pageProps) {
       <Head>
         <title>Perform&Zen</title>
         <meta name="author" content="Christelle CROIZE" />
-        <meta charset="utf-8" />
+        <meta charSet="utf-8" />
         <meta name="google-site-verification" content="DcE3vPkn00VyAmW5hNhOHdDmbbwLFp7KYamgQv2XHG4" />
         <meta name="keywords" content="perform&zen, performandzen, méthode LEAN, TOP, bien-être, coaching, formation, optimisation, performance, potentiel" />
         <meta name="description" content="PerformandZen accompagne professionnels et particuliers dans l'optimisation de leurs performances et leur bien-être au quotidien." />
@@ -228,7 +228,7 @@ function Home(pageProps) {
         </section>
         <section id = "contact" className={styles.contact} >
             <div id="panel"  className={styles.panel} >
-                <img loading = 'lazy' id="panel-container" className={styles.panelContainer}  src={"/images/png_20220724_153350_0000.PNG"} alt="Image type carte de visite de la société Perform and Zen comportant sa devise : sLe corps et l'esprit au service de la performance"/>
+                <img loading = 'lazy' id="panel-container" className={styles.panelContainer}  src={"/images/png_20220724_153350_0000.avif"} alt="Image type carte de visite de la société Perform and Zen comportant sa devise : sLe corps et l'esprit au service de la performance"/>
             </div>
             <div>
                 <h2>Contact</h2>
