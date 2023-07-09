@@ -2,7 +2,7 @@ import Head from 'next/head'
 
 import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
-import img from 'next/image'
+import Image from 'next/image'
 import Link from 'next/link';
 import Layout from '@/components/layout'
 import Footer from '@/components/footer'
@@ -120,7 +120,7 @@ function Home(pageProps) {
       </Head>
       <div className={styles.herobanner} >
         <header className={styles.header}>
-            <img loading = 'lazy' src={"/images/logo.png"} width={140} className={styles.logo} alt='PerformandZen logo de la marque'/>
+            <Image loading = 'lazy' src={"/images/logo.png"} width={140} height={92.9} className={styles.logo} alt='PerformandZen logo de la marque'/>
             <nav className={[styles.nav, activeMenu].join(' ')}>
                 <ul>
                     <li className={styles.prestationspro}>
@@ -235,7 +235,7 @@ function Home(pageProps) {
                 <b>Christelle CROIZÉ</b>
                 <Link href = "mailto:performandzen@gmail.com" className={styles.textanimate}>performandzen@gmail.com</Link>
                 <Link href = "tel:0675563584">06.75.56.35.84</Link>
-                <Link href ="" className={styles.linkedin}><img loading = 'lazy' src={"/images/logo-linkedin.png"} alt="" /></Link>
+                <Link href ="" className={styles.linkedin}><Image width={30} height={30} loading = 'lazy' src={"/images/logo-linkedin.png"} alt="" /></Link>
             </div>
         </section>
     </main>
